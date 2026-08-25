@@ -25,6 +25,14 @@ fallback form in `index.html` instead of the automated one.
 - **Prospect business name** (required).
 - **Known website URL** (optional — if not given, search for it first).
 - **City/region** (optional but helps disambiguate search results and GBP lookup).
+- **Report language** — English (US) or Spanish (Mexico). EdgeBeyond serves prospects in
+  both the US and Mexico; if not specified, ask, or infer from context (a `.mx` domain, a
+  Mexican city, Spanish-language site content). Write the ENTIRE report in that
+  language — every heading, label, finding, quick win, and CTA, not just the findings —
+  translating fixed chrome text too ("Free Snapshot Report", "Grade", "Download PDF",
+  pillar names, footer disclaimer). Keep the prospect's own business name and any verbatim
+  evidence quotes exactly as found, untranslated. Spanish should read as natural business
+  Spanish for Mexico (tú/informal but professional), not a literal word-for-word translation.
 
 ## Step 1 — Research (use WebSearch / WebFetch)
 

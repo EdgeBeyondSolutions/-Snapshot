@@ -35,17 +35,40 @@ def strip_fences(text: str) -> str:
     return text
 
 
-def build_prompt(name: str, website: str, facebook: str, instagram: str) -> str:
+LANGUAGE_NAMES = {"en": "English (US)", "es": "Spanish (Mexico — natural business Spanish, tú/informal but professional, as EdgeBeyond Solutions would write it for a Mexican prospect)"}
+
+
+def build_prompt(name: str, website: str, facebook: str, instagram: str, city: str, lang: str) -> str:
     website_line = website or "none provided — search for one; if you can't confidently find one, treat this prospect as having no website"
     facebook_line = facebook or "not provided — search for one; if none found, treat as absent"
     instagram_line = instagram or "not provided — search for one; if none found, treat as absent"
+    city_line = city or "not provided"
+    language_name = LANGUAGE_NAMES.get(lang, LANGUAGE_NAMES["en"])
     return f"""Follow the playbook in .claude/skills/snapshot/SKILL.md in this directory exactly.
 
 Generate a "Digital Presence Snapshot" report for this prospect:
 - Business name: {name}
+- City/region: {city_line}
 - Website: {website_line}
 - Facebook: {facebook_line}
 - Instagram: {instagram_line}
+
+This is a non-interactive, single-shot run — there is no human available to answer
+clarifying questions, so you must NEVER stop to ask one. If the business name is ambiguous
+(multiple unrelated businesses share it) and no city/region was given, use the strongest
+available signal to pick the single most likely match (the website/socials provided, or
+otherwise the most established/highest-review-count candidate) and proceed. In that case,
+add one explicit sentence near the top of the report (in the hero lede or overall summary)
+stating the assumption plainly, e.g. "Multiple businesses share this name; this snapshot
+assumes '<name>' in <city> is the target" — written in {language_name} like the rest of the
+report. Do not leave the report unfinished and do not output anything other than the final
+HTML document under any circumstance.
+
+Write the ENTIRE report — every heading, label, finding, quick win, and CTA — in
+{language_name}. Translate the fixed chrome text too (e.g. "Free Snapshot Report", "Grade",
+"Download PDF", pillar names, footer disclaimer) into that language; don't leave any of it
+in English if the target language isn't English. Keep the prospect's own business name and
+any verbatim evidence quotes (like a footer copyright line) exactly as found, untranslated.
 
 Use WebSearch and WebFetch to actually research this business — its website (if any),
 Google Business Profile, and social/directory presence. Do not invent facts; only include
@@ -89,8 +112,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         website = (payload.get("website") or "").strip()
         facebook = (payload.get("facebook") or "").strip()
         instagram = (payload.get("instagram") or "").strip()
+        city = (payload.get("city") or "").strip()
+        lang = (payload.get("lang") or "en").strip()
+        if lang not in LANGUAGE_NAMES:
+            lang = "en"
 
-        prompt = build_prompt(name, website, facebook, instagram)
+        prompt = build_prompt(name, website, facebook, instagram, city, lang)
 
         try:
             result = subprocess.run(
@@ -119,7 +146,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         )
 
         if result.returncode != 0:
-            self.send_json(500, {"error": f"Claude CLI falló: {result.stderr[-2000:]}"})
+            detail = (result.stderr or result.stdout or "").strip()[-2000:] or "(sin detalle)"
+            self.send_json(500, {"error": f"Claude CLI falló: {detail}"})
             return
 
         html = strip_fences(result.stdout)

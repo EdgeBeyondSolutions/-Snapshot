@@ -99,6 +99,15 @@
     <p class="hint">Investigo el sitio web, el Google Business Profile y las redes del prospecto, y redacto el reporte completo — igual que el de Terra Klean. Solo el nombre es obligatorio. La investigación real toma varios minutos (hasta ~8).</p>
     <label for="autoName">Nombre del negocio *</label>
     <input type="text" id="autoName" placeholder="Terra Klean Solutions, Inc.">
+    <div class="row2">
+      <div><label for="autoCity">Ciudad / Estado</label><input type="text" id="autoCity" placeholder="San Antonio, TX (ayuda a evitar negocios homónimos)"></div>
+      <div><label for="autoLang">Idioma del reporte</label>
+        <select id="autoLang">
+          <option value="en">English (US)</option>
+          <option value="es">Español (México)</option>
+        </select>
+      </div>
+    </div>
     <div class="row3">
       <div><label for="autoWebsite">Sitio web</label><input type="text" id="autoWebsite" placeholder="https://..."></div>
       <div><label for="autoFacebook">Facebook</label><input type="text" id="autoFacebook" placeholder="facebook.com/..."></div>
@@ -117,10 +126,17 @@
 
   <fieldset>
     <legend>Prospecto</legend>
-    <div class="row2">
+    <div class="row3">
       <div>
         <label for="prospectName">Nombre del negocio</label>
         <input type="text" id="prospectName" required placeholder="Terra Klean Solutions, Inc.">
+      </div>
+      <div>
+        <label for="lang">Idioma del reporte</label>
+        <select id="lang">
+          <option value="en">English (US)</option>
+          <option value="es">Español (México)</option>
+        </select>
       </div>
       <div>
         <label for="reportDate">Fecha del reporte</label>
@@ -330,10 +346,11 @@ document.getElementById("noWebsite").addEventListener("change", e => {
   }
 });
 
-function fmtDate(iso) {
+function fmtDate(iso, lang) {
   if (!iso) return "";
   const d = new Date(iso + "T00:00:00");
-  return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  const locale = lang === "es" ? "es-MX" : "en-US";
+  return d.toLocaleDateString(locale, { month: "short", day: "numeric", year: "numeric" });
 }
 
 function gradeDot(letter) {
@@ -378,7 +395,7 @@ function collectFindings(pillar) {
   return html;
 }
 
-function pillarSection(kicker, h2, gradeText, gradeClass, iconSvg, findingsHtml) {
+function pillarSection(kicker, h2, gradeText, gradeClass, iconSvg, findingsHtml, gradePrefix) {
   return `  <section class="section">
     <div class="container">
       <div class="section-head">
@@ -389,7 +406,7 @@ function pillarSection(kicker, h2, gradeText, gradeClass, iconSvg, findingsHtml)
             <h2>${h2}</h2>
           </div>
         </div>
-        <span class="section-grade ${gradeClass}">Grade ${gradeText}</span>
+        <span class="section-grade ${gradeClass}">${gradePrefix} ${gradeText}</span>
       </div>
       <div class="finding-grid">
 ${findingsHtml}      </div>
@@ -526,7 +543,55 @@ const REPORT_CSS = `
   .download-pdf-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 `;
 
+const STRINGS = {
+  en: {
+    htmlLang: "en",
+    titleTag: name => `Digital Presence Snapshot — ${name}`,
+    downloadPdf: "Download PDF",
+    reportTagLabel: "DIGITAL PRESENCE SNAPSHOT",
+    preparedFor: name => `Prepared for ${name}`,
+    freeSnapshotReport: "Free Snapshot Report",
+    overallCaption: "Overall",
+    pillarLabels: { website: "Website", gbp: "Google Profile", social: "Social", listings: "Listings" },
+    pillarKickers: { website: "Pillar 01 — Website", gbp: "Pillar 02 — Google Business Profile", social: "Pillar 03 — Social &amp; Listings" },
+    gradePrefix: "Grade",
+    theFixKicker: "The Fix — In Order",
+    theFixH2: "Five moves, ranked by how much they cost to ignore",
+    ctaH2: "We fix all five. Usually starting with the free one.",
+    ctaBody: "This snapshot took us under a day using only what's publicly visible. A working session with your team takes about 30 minutes and leaves you with a prioritized plan — no obligation either way.",
+    ctaButton: "Book the 30-Minute Walkthrough",
+    footerDisclaimer: date => `Findings based on publicly available data as of ${date}. Not a substitute for a full technical audit.`,
+    footerAgency: "EdgeBeyond Solutions",
+    mailtoSubject: name => `30-Minute Walkthrough — ${name}`,
+    mailtoBody: name => `Hi EdgeBeyond team,\n\nI'd like to book the 30-minute walkthrough after reviewing the Digital Presence Snapshot for ${name}.\n\nName:\nBest time to talk:\n`,
+    dateLocale: "en-US"
+  },
+  es: {
+    htmlLang: "es",
+    titleTag: name => `Diagnóstico de Presencia Digital — ${name}`,
+    downloadPdf: "Descargar PDF",
+    reportTagLabel: "DIAGNÓSTICO DE PRESENCIA DIGITAL",
+    preparedFor: name => `Preparado para ${name}`,
+    freeSnapshotReport: "Diagnóstico Gratuito",
+    overallCaption: "General",
+    pillarLabels: { website: "Sitio web", gbp: "Perfil de Google", social: "Redes", listings: "Directorios" },
+    pillarKickers: { website: "Pilar 01 — Sitio Web", gbp: "Pilar 02 — Perfil de Google Business", social: "Pilar 03 — Redes y Directorios" },
+    gradePrefix: "Calificación",
+    theFixKicker: "La Solución — En Orden",
+    theFixH2: "Cinco acciones, ordenadas por cuánto cuesta ignorarlas",
+    ctaH2: "Resolvemos las cinco. Normalmente empezando por la gratis.",
+    ctaBody: "Este diagnóstico nos tomó menos de un día usando solo lo que es públicamente visible. Una sesión de trabajo con tu equipo toma unos 30 minutos y te deja con un plan priorizado — sin compromiso de ningún lado.",
+    ctaButton: "Agenda tu Sesión de 30 Minutos",
+    footerDisclaimer: date => `Hallazgos basados en información públicamente disponible al ${date}. No sustituye una auditoría técnica completa.`,
+    footerAgency: "EdgeBeyond Solutions",
+    mailtoSubject: name => `Sesión de 30 Minutos — ${name}`,
+    mailtoBody: name => `Hola equipo de EdgeBeyond,\n\nMe gustaría agendar la sesión de 30 minutos después de revisar el Diagnóstico de Presencia Digital para ${name}.\n\nNombre:\nMejor horario para hablar:\n`,
+    dateLocale: "es-MX"
+  }
+};
+
 function buildReportHtml(d) {
+  const t = STRINGS[d.lang] || STRINGS.en;
   const websiteFindings = collectFindings("website");
   const gbpFindings = collectFindings("gbp");
   const socialFindings = collectFindings("social");
@@ -537,29 +602,29 @@ function buildReportHtml(d) {
     winsHtml += winHtml(num, row.querySelector(".w-title").value, row.querySelector(".w-body").value, row.querySelector(".w-impact").value);
   });
 
-  const subject = encodeURIComponent(`30-Minute Walkthrough — ${d.prospectName}`);
-  const body = encodeURIComponent(`Hi EdgeBeyond team,\n\nI'd like to book the 30-minute walkthrough after reviewing the Digital Presence Snapshot for ${d.prospectName}.\n\nName:\nBest time to talk:\n`);
+  const subject = encodeURIComponent(t.mailtoSubject(d.prospectName));
+  const body = encodeURIComponent(t.mailtoBody(d.prospectName));
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${t.htmlLang}">
 <head>
 <meta charset="utf-8">
-<title>Digital Presence Snapshot — ${d.prospectName}</title>
+<title>${t.titleTag(d.prospectName)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
 <style>${REPORT_CSS}</style>
 </head>
 <body>
-<button class="download-pdf-btn" onclick="window.print()" aria-label="Download PDF">
+<button class="download-pdf-btn" onclick="window.print()" aria-label="${t.downloadPdf}">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
-  <span>Download PDF</span>
+  <span>${t.downloadPdf}</span>
 </button>
 <header class="report-header">
   <div class="container">
     <div class="brand-row">
       <div><img class="brand-logo" src="${LOGO_DATA_URI}" alt="EdgeBeyond Solutions" /></div>
-      <div class="report-tag">DIGITAL PRESENCE SNAPSHOT<br><strong>Prepared for ${d.prospectName}</strong> · ${d.reportDate}</div>
+      <div class="report-tag">${t.reportTagLabel}<br><strong>${t.preparedFor(d.prospectName)}</strong> · ${d.reportDate}</div>
     </div>
   </div>
 </header>
@@ -568,7 +633,7 @@ function buildReportHtml(d) {
     <div class="container">
       <div class="hero-top">
         <div class="hero-copy-col">
-          <p class="hero-eyebrow">Free Snapshot Report</p>
+          <p class="hero-eyebrow">${t.freeSnapshotReport}</p>
           <h1>${d.heroH1}</h1>
           <p class="lede">${d.heroLede}</p>
         </div>
@@ -583,42 +648,42 @@ function buildReportHtml(d) {
         </svg>
       </div>
       <div class="grade-strip">
-        <div class="grade-big"><span class="letter">${d.overallGrade}</span><span class="caption">Overall</span></div>
+        <div class="grade-big"><span class="letter">${d.overallGrade}</span><span class="caption">${t.overallCaption}</span></div>
         <div class="grade-summary">
           <h2>${d.overallH2}</h2>
           <p>${d.overallSummary}</p>
           <div class="pillar-scores">
-            <div class="pillar-score"><span class="dot" style="background:var(${gradeDot(d.websiteGrade)})"></span><span class="label">Website</span><span class="val">${d.websiteGrade}</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(${gradeDot(d.gbpGrade)})"></span><span class="label">Google Profile</span><span class="val">${d.gbpGrade}</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(${gradeDot(d.socialGrade)})"></span><span class="label">Social</span><span class="val">${d.socialGrade}</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(${gradeDot(d.listingsGrade)})"></span><span class="label">Listings</span><span class="val">${d.listingsGrade}</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(${gradeDot(d.websiteGrade)})"></span><span class="label">${t.pillarLabels.website}</span><span class="val">${d.websiteGrade}</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(${gradeDot(d.gbpGrade)})"></span><span class="label">${t.pillarLabels.gbp}</span><span class="val">${d.gbpGrade}</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(${gradeDot(d.socialGrade)})"></span><span class="label">${t.pillarLabels.social}</span><span class="val">${d.socialGrade}</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(${gradeDot(d.listingsGrade)})"></span><span class="label">${t.pillarLabels.listings}</span><span class="val">${d.listingsGrade}</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
-${pillarSection("Pillar 01 — Website", d.websiteH2, d.websiteGrade, d.websiteGradeClass, PILLAR_ICONS.website, websiteFindings)}
-${pillarSection("Pillar 02 — Google Business Profile", d.gbpH2, d.gbpGrade, d.gbpGradeClass, PILLAR_ICONS.gbp, gbpFindings)}
-${pillarSection("Pillar 03 — Social &amp; Listings", d.socialH2, `${d.socialGrade} / ${d.listingsGrade}`, d.socialGradeClass, PILLAR_ICONS.social, socialFindings)}
+${pillarSection(t.pillarKickers.website, d.websiteH2, d.websiteGrade, d.websiteGradeClass, PILLAR_ICONS.website, websiteFindings, t.gradePrefix)}
+${pillarSection(t.pillarKickers.gbp, d.gbpH2, d.gbpGrade, d.gbpGradeClass, PILLAR_ICONS.gbp, gbpFindings, t.gradePrefix)}
+${pillarSection(t.pillarKickers.social, d.socialH2, `${d.socialGrade} / ${d.listingsGrade}`, d.socialGradeClass, PILLAR_ICONS.social, socialFindings, t.gradePrefix)}
   <section class="section">
     <div class="container">
-      <div class="section-head"><div><p class="kicker">The Fix — In Order</p><h2>Five moves, ranked by how much they cost to ignore</h2></div></div>
+      <div class="section-head"><div><p class="kicker">${t.theFixKicker}</p><h2>${t.theFixH2}</h2></div></div>
       <div class="wins-list">
 ${winsHtml}      </div>
       <div class="cta">
         <div class="cta-inner">
           <img class="brand-logo brand-logo-cta" src="${LOGO_DATA_URI}" alt="EdgeBeyond Solutions" />
-          <h2>We fix all five. Usually starting with the free one.</h2>
-          <p>This snapshot took us under a day using only what's publicly visible. A working session with your team takes about 30 minutes and leaves you with a prioritized plan — no obligation either way.</p>
-          <a class="btn" href="mailto:${d.ctaEmail}?subject=${subject}&body=${body}">Book the 30-Minute Walkthrough</a>
+          <h2>${t.ctaH2}</h2>
+          <p>${t.ctaBody}</p>
+          <a class="btn" href="mailto:${d.ctaEmail}?subject=${subject}&body=${body}">${t.ctaButton}</a>
         </div>
       </div>
     </div>
   </section>
   <footer class="report-footer">
     <div class="container" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:.5rem;">
-      <span>Findings based on publicly available data as of ${d.reportDate}. Not a substitute for a full technical audit.</span>
-      <span>EdgeBeyond Solutions</span>
+      <span>${t.footerDisclaimer(d.reportDate)}</span>
+      <span>${t.footerAgency}</span>
     </div>
   </footer>
 </main>
@@ -647,6 +712,8 @@ document.getElementById("auto-generate-btn").addEventListener("click", async () 
   const website = document.getElementById("autoWebsite").value.trim();
   const facebook = document.getElementById("autoFacebook").value.trim();
   const instagram = document.getElementById("autoInstagram").value.trim();
+  const city = document.getElementById("autoCity").value.trim();
+  const lang = document.getElementById("autoLang").value;
 
   btn.disabled = true;
   btn.textContent = "Investigando… (puede tardar hasta 8 min)";
@@ -657,10 +724,14 @@ document.getElementById("auto-generate-btn").addEventListener("click", async () 
     const res = await fetch("/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, website, facebook, instagram })
+      body: JSON.stringify({ name, website, facebook, instagram, city, lang })
     });
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error || "Error desconocido");
+    if (!res.ok) {
+      let msg = data.error || "Error desconocido";
+      if (data.raw) msg += `\n\nRespuesta de Claude: "${data.raw.slice(0, 400)}"`;
+      throw new Error(msg);
+    }
     lastHtml = data.html;
     lastSlug = slugify(name) || "prospect";
     document.getElementById("report-frame").srcdoc = lastHtml;
@@ -677,9 +748,11 @@ document.getElementById("auto-generate-btn").addEventListener("click", async () 
 
 document.getElementById("snapshot-form").addEventListener("submit", e => {
   e.preventDefault();
+  const lang = document.getElementById("lang").value;
   const d = {
     prospectName: document.getElementById("prospectName").value.trim() || "This Business",
-    reportDate: fmtDate(document.getElementById("reportDate").value),
+    lang,
+    reportDate: fmtDate(document.getElementById("reportDate").value, lang),
     heroH1: document.getElementById("heroH1").value.trim(),
     heroLede: document.getElementById("heroLede").value.trim(),
     overallGrade: document.getElementById("overallGrade").value.trim(),

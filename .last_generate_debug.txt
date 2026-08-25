@@ -1,11 +1,13 @@
 RETURNCODE: 0
 
 --- STDOUT ---
+I have enough research. Producing the final HTML report now.
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Digital Presence Snapshot — Hotel Colonial Taxco</title>
+<title>Digital Presence Snapshot — Balneario Los Pinos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
@@ -220,9 +222,9 @@ RETURNCODE: 0
 </head>
 <body>
 
-<button class="download-pdf-btn no-print" onclick="window.print()" aria-label="Download PDF">
+<button class="download-pdf-btn no-print" onclick="window.print()" aria-label="Descargar PDF">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
-  <span>Download PDF</span>
+  <span>Descargar PDF</span>
 </button>
 
 <header class="report-header">
@@ -231,7 +233,7 @@ RETURNCODE: 0
       <div>
         <img class="brand-logo" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
       </div>
-      <div class="report-tag">DIGITAL PRESENCE SNAPSHOT<br><strong>Prepared for Hotel Colonial Taxco</strong> · August 24, 2026</div>
+      <div class="report-tag">DIGITAL PRESENCE SNAPSHOT<br><strong>Preparado para Balneario Los Pinos</strong> · 24 de agosto de 2026</div>
     </div>
   </div>
 </header>
@@ -241,9 +243,9 @@ RETURNCODE: 0
     <div class="container">
       <div class="hero-top">
         <div class="hero-copy-col">
-          <p class="hero-eyebrow">Free Snapshot Report</p>
-          <h1>Guests rate you 4 of 5. Google can't even agree on your phone number.</h1>
-          <p class="lede">This audit looked at what a traveler searching "Hotel Colonial Taxco" finds tonight, on their phone — search results, Google, booking platforms, and social — using only what's already publicly visible.</p>
+          <p class="hero-eyebrow">Reporte gratuito de diagnóstico</p>
+          <h1>16 años de trayectoria que tu propio dominio no respalda.</h1>
+          <p class="lede">Existen varios balnearios llamados "Los Pinos" en México (incluyendo uno en Abasolo, Guanajuato); este snapshot asume que el negocio objetivo es Balneario Los Pinos, en Pañhé, Tecozautla, Hidalgo — la coincidencia más fuerte con el nombre y la ciudad proporcionados. Revisamos exactamente lo que un cliente encuentra hoy en su celular: tu sitio web, tu Perfil de Negocio de Google y tus redes/directorios.</p>
         </div>
         <svg class="hero-illo" viewBox="0 0 100 100" aria-hidden="true">
           <rect x="18" y="8" width="47" height="80" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="2"/>
@@ -258,24 +260,24 @@ RETURNCODE: 0
 
       <div class="grade-strip">
         <div class="grade-big">
-          <span class="letter">D</span>
-          <span class="caption">Overall</span>
+          <span class="letter">D+</span>
+          <span class="caption">General</span>
         </div>
         <div class="grade-summary">
-          <h2>284 real reviews, buried under a fractured, contact-less web presence</h2>
-          <p>Hotel Colonial Taxco has genuine traveler trust — an 8.3/10 average across 284 Booking.com reviews and a 4-of-5 TripAdvisor score, ranked #18 of 32 hotels in Taxco. None of that trust is anchored to a website or a single verified profile the hotel controls, and the phone number and address change depending on which listing you happen to land on.</p>
+          <h2>1,425 reseñas a 4.5 estrellas en Google, pero tu dominio propio no carga para nadie.</h2>
+          <p>Balneario Los Pinos tiene más de 16 años operando y una base de clientes que lo confirma: miles de reseñas positivas y una comunidad activa en Instagram. El problema no es la reputación — es que esa confianza ganada no está respaldada por un sitio propio funcional ni por datos de contacto consistentes, así que una parte de los clientes que te buscan hoy termina en otro balneario.</p>
           <div class="pillar-scores">
-            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Website</span><span class="val">F</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Google Profile</span><span class="val">D</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Social</span><span class="val">C</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Listings</span><span class="val">D</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Sitio web</span><span class="val">F</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Perfil de Google</span><span class="val">A-</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Redes sociales</span><span class="val">B</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Directorios</span><span class="val">C-</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PILLAR 01 — WEBSITE (no-website variant) -->
+  <!-- PILLAR 01 — WEBSITE (no live website case) -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -294,25 +296,25 @@ RETURNCODE: 0
             <circle cx="78" cy="70.5" r="2.6" fill="#fff"/>
           </svg>
           <div>
-            <p class="kicker">Pillar 01 — Website</p>
-            <h2>No hotel-owned website could be found</h2>
+            <p class="kicker">Pilar 01 — Sitio web</p>
+            <h2>El dominio que aparece en cada búsqueda de "Balneario Los Pinos" ya no responde.</h2>
           </div>
         </div>
-        <span class="section-grade critical">Grade F</span>
+        <span class="section-grade critical">Calificación F</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Every result is a reseller, not the hotel</h4></div>
-          <p>Searching "Hotel Colonial Taxco" surfaces only third-party booking aggregators — Booking.com, Trivago, PriceTravel, Hotels.com, and directory sites like hotelesentaxco.com — not a single domain the hotel itself controls. Guests who want real photos, current pricing, or a direct line to the hotel land on a reseller's page instead.</p>
-          <div class="evidence">Sources found: booking.com/hotel/mx/colonial-taxco-taxco.html · trivago.com · pricetravel.com · hotelesentaxco.com · hotelsguerrero.com — zero hotel-owned domains</div>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>balneariolospinos.com.mx aparece en decenas de listados, pero devuelve error 404</h4></div>
+          <p>Buscamos el sitio en Google, en directorios de balnearios y en fichas turísticas de Hidalgo: todos apuntan al mismo dominio. Al intentar cargarlo (con y sin "www", con http y https) el servidor responde "404 Not Found" en cada intento. Para un cliente en su celular, esto se ve exactamente igual que "este negocio ya no existe".</p>
+          <div class="evidence">balneariolospinos.com.mx → HTTP 404 Not Found (verificado en esta auditoría)</div>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Every booking pays a commission</h4></div>
-          <p>With no direct booking channel, 100% of online reservations route through OTAs charging roughly 15-25% commission per stay — margin a simple direct-booking page would keep in the hotel's pocket on every stay it captures.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Un balneario homónimo en Guanajuato le roba tráfico de búsqueda</h4></div>
+          <p>Existe otro negocio activo llamado "Balneario Los Pinos" en Abasolo, Guanajuato, con sitio web funcional. Sin un dominio propio que cargue, cualquier cliente que teclee mal el nombre o confíe en el primer resultado corre el riesgo de terminar reservando (o comparando precios) en el balneario equivocado.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No one is correcting the record</h4></div>
-          <p>Aggregator pages disagree on basics — room count, amenities, even whether the pool still operates ("there appears there was a pool at one time but it is no longer in operation," per a TripAdvisor reviewer) — and with no official page, none of it gets fixed.</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Sin sitio propio, no hay forma de reservar, cotizar o ver precios sin llamar o escribir por redes</h4></div>
+          <p>Todo el proceso de decisión — precios de entrada, disponibilidad de cabañas, horarios reales — depende hoy de que el cliente llame por teléfono o escriba por Facebook/Instagram y espere respuesta. Eso elimina a cualquier cliente que prefiera decidir de noche, sin hablar con nadie.</p>
         </div>
       </div>
     </div>
@@ -336,25 +338,25 @@ RETURNCODE: 0
             </g>
           </svg>
           <div>
-            <p class="kicker">Pillar 02 — Google Business Profile</p>
-            <h2>Contact details disagree depending on where you look</h2>
+            <p class="kicker">Pilar 02 — Perfil de Negocio de Google</p>
+            <h2>Tu mejor activo digital: 1,425 reseñas a 4.5 estrellas — pero con datos que no cuadran entre sí.</h2>
           </div>
         </div>
-        <span class="section-grade critical">Grade D</span>
+        <span class="section-grade pass">Calificación A-</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Two different phone numbers, both "official"</h4></div>
-          <p>The hotel's own Instagram bio lists one pair of numbers, while search listings and directories show a different one entirely. A guest calling the number they found gets no answer, no matter which listing they trusted.</p>
-          <div class="evidence">Instagram bio: "Teléfono: 7626252812 y 7621068866" vs. search/directory listings: "+52 762 116 1626"</div>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>1,425 reseñas con 4.5/5 de promedio — una base de clientes leal y verificable</h4></div>
+          <p>Este es el activo más fuerte de todo tu presencia en línea: cientos de clientes describen las aguas termales, la limpieza de las instalaciones y la atención del personal en términos concretos. Es el tipo de prueba social que la mayoría de negocios paga por conseguir.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>The street address isn't consistent either</h4></div>
-          <p>Some listings place the hotel on "Real de Zacazontla, El Solar," others on "Calle Zacazontla no. 6, Barrio de Arroyo" — close enough to look like a typo, different enough to drop a guest's GPS pin on the wrong street after dark.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>El horario publicado cambia según dónde lo consultes</h4></div>
+          <p>Unas fuentes indican viernes a domingo, 8:00 a.m. a 12:00 a.m.; otras indican martes a domingo, 8:00 a.m. a 6:00 p.m. Un cliente que planea su fin de semana con el dato equivocado llega y encuentra el balneario cerrado — y ese tipo de mala experiencia sí se convierte en reseña negativa.</p>
+          <div class="evidence">Fuente A: "viernes a domingo de 8:00 a.m. a 12:00 a.m." · Fuente B: "martes a domingo de 8:00 a.m. a 6:00 p.m."</div>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>The underlying reputation is genuinely strong</h4></div>
-          <p>284 Booking.com reviews averaging 8.3/10, and a 4-of-5 TripAdvisor score ranked #18 of 32 Taxco hotels — guests who stay are satisfied. The listings just aren't consistent enough to reinforce that trust before they book.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>El perfil no enlaza a ningún sitio funcional</h4></div>
+          <p>Con el dominio propio caído, el botón de "sitio web" en el perfil de Google no lleva a ninguna parte útil — todo ese tráfico calificado (gente que ya decidió buscarte por nombre) se queda sin un destino donde profundizar antes de llamar.</p>
         </div>
       </div>
     </div>
@@ -380,24 +382,30 @@ RETURNCODE: 0
             <rect x="28" y="75" width="14" height="3" rx="1.5" fill="#fff" opacity=".6"/>
           </svg>
           <div>
-            <p class="kicker">Pillar 03 — Social &amp; Listings</p>
-            <h2>Instagram is doing the work; Facebook is split in two</h2>
+            <p class="kicker">Pilar 03 — Redes sociales y directorios</p>
+            <h2>Instagram activo, Facebook dormido pese a 6,431 seguidores, y tu teléfono cambia según el directorio.</h2>
           </div>
         </div>
-        <span class="section-grade critical">Grade C / D</span>
+        <span class="section-grade warn">Calificación B / C-</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Two competing Facebook pages</h4></div>
-          <p>"Hotel Colonial | Taxco" (68 likes, 6 check-ins) and a separate "HOTEL colonial TAXCO" page (76 likes, 32 check-ins) both claim to be the same property, splitting likes, reviews, and message inboxes between two half-maintained pages.</p>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>@balneariolospinos en Instagram está genuinamente activo</h4></div>
+          <p>1,213 seguidores y 85 publicaciones muestran contenido real y reciente del lugar — es el canal que mejor refleja hoy la experiencia real que ofrecen.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Instagram is active and current</h4></div>
-          <p>@hotel.colonial.taxco2 has 301 followers and content posted as recently as July 24, 2026, with an up-to-date bio and phone numbers — proof the hotel can run a channel well when it's the right one.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Facebook tiene 6,431 "me gusta" pero solo 4 personas "hablando de esto"</h4></div>
+          <p>Es la página con más alcance potencial de todas — y la más desaprovechada. Esa audiencia ya está ahí; simplemente no está recibiendo contenido con la frecuencia suficiente para generar conversación ni algoritmo a su favor.</p>
+          <div class="evidence">Facebook: 6,431 me gusta · "4 personas están hablando de esto"</div>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Duplicate listings on TripAdvisor</h4></div>
-          <p>TripAdvisor carries what appears to be the same 15-room property under two separate listings ("Hotel Colonial Taxco" and "Hotel Colonial"), each collecting its own reviews instead of one property building a single, stronger score.</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>El teléfono publicado no es el mismo en todos los directorios</h4></div>
+          <p>Un listado turístico muestra 01 761 735 60 99; el perfil de Instagram y otro directorio muestran +52 414 107 8283. Un cliente que marque el número equivocado —o que reciba un tono de "número inexistente"— no vuelve a intentar: llama al siguiente balneario en la lista.</p>
+          <div class="evidence">Directorio A: "01 761 735 60 99" · Instagram / Directorio B: "+52 414 107 8283"</div>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>El correo de contacto tampoco coincide entre fuentes</h4></div>
+          <p>Un directorio lista contacto@balneariolospinos.com (ligado al dominio caído); Instagram lista lospinostecozautla@gmail.com. Sin un dato "oficial" único, hasta un cliente que quiera cotizar por escrito no sabe a cuál dirigirse con confianza.</p>
         </div>
       </div>
     </div>
@@ -408,49 +416,49 @@ RETURNCODE: 0
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="kicker">The Fix — In Order</p>
-          <h2>Five moves, ranked by how much they cost to ignore</h2>
+          <p class="kicker">La solución — en orden</p>
+          <h2>Cinco movimientos, ordenados por lo que cuesta ignorarlos</h2>
         </div>
       </div>
       <div class="wins-list">
         <div class="win">
           <span class="win-num">01</span>
           <div>
-            <h4>Claim and unify the Google Business Profile</h4>
-            <p>There's no confirmed, hotel-controlled Google listing with one consistent phone number and address today. Claiming it is free and takes under an hour, and it's the first thing most guests check before calling.</p>
-            <span class="impact">Highest impact · Free</span>
+            <h4>Reclama y unifica tu Perfil de Negocio de Google con un solo teléfono, correo y horario</h4>
+            <p>Es tu activo más fuerte y el más barato de arreglar: solo requiere elegir los datos correctos y publicarlos de forma consistente. No cuesta nada y es lo primero que ve cualquier cliente que te busque hoy.</p>
+            <span class="impact">Mayor impacto · Gratis</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">02</span>
           <div>
-            <h4>Collapse the two Facebook pages into one</h4>
-            <p>Neither page alone looks credible at 68 or 76 likes, and a guest messaging the wrong one may never hear back. Merging duplicate business pages keeps every review and check-in in one place.</p>
-            <span class="impact">Reputation risk</span>
+            <h4>Corrige el teléfono y el correo en todos los directorios donde aparecen</h4>
+            <p>Mientras existan dos números y dos correos circulando, seguirás perdiendo llamadas sin saberlo. Es trabajo de una tarde, no de un rediseño.</p>
+            <span class="impact">Base de SEO</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">03</span>
           <div>
-            <h4>Resolve the duplicate TripAdvisor listings</h4>
-            <p>Two separate entries for the same hotel split reviews, photos, and ranking instead of letting them compound into one stronger, more visible score.</p>
-            <span class="impact">SEO foundation</span>
+            <h4>Reactiva Facebook con publicaciones regulares</h4>
+            <p>Ya tienes 6,431 personas siguiéndote — el problema no es alcance, es frecuencia. Retomar publicaciones semanales reactiva ese algoritmo y esa audiencia que ya pagaste (en tiempo) por conseguir.</p>
+            <span class="impact">Riesgo de reputación</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">04</span>
           <div>
-            <h4>Publish one page with real photos and one phone number</h4>
-            <p>A single hotel-owned page — even just one page — beats every aggregator's version of the story, and gives search engines and guests a canonical source for hours, pricing, and contact info.</p>
-            <span class="impact">Lead capture</span>
+            <h4>Agrega un formulario real de reservación/cotización, no solo mensajes directos</h4>
+            <p>Un formulario corto (fecha, número de personas, tipo de espacio) que capture el interés del cliente de inmediato — incluso de noche, sin que nadie conteste el teléfono — convierte visitas en reservas confirmadas en vez de mensajes que se pierden en el chat.</p>
+            <span class="impact">Captura de leads</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">05</span>
           <div>
-            <h4>Build a direct booking channel</h4>
-            <p>Every reservation currently flows through OTA commissions of roughly 15-25% per stay. A direct booking form recovers that margin on every stay it captures.</p>
-            <span class="impact">Full rebuild</span>
+            <h4>Reconstruye un sitio web propio que sí cargue</h4>
+            <p>Con 16 años de trayectoria y 1,425 reseñas a 4.5 estrellas, mereces un sitio que muestre eso — precios claros, fotos reales, reservación en línea — en vez de un dominio que hoy da error 404 a cualquiera que lo intente abrir.</p>
+            <span class="impact">Reconstrucción completa</span>
           </div>
         </div>
       </div>
@@ -458,9 +466,9 @@ RETURNCODE: 0
       <div class="cta">
         <div class="cta-inner">
           <img class="brand-logo brand-logo-cta" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
-          <h2>We fix all five. Usually starting with the free one.</h2>
-          <p>This snapshot took us under a day using only what's publicly visible. A working session with your team takes about 30 minutes and leaves you with a prioritized plan — no obligation either way.</p>
-          <a class="btn" href="mailto:contact@edgebeyond.solutions?subject=Digital%20Presence%20Snapshot%20%E2%80%94%20Hotel%20Colonial%20Taxco&body=Hi%2C%20I%27d%20like%20to%20book%20the%2030-minute%20walkthrough%20after%20reviewing%20my%20Digital%20Presence%20Snapshot.">Book the 30-Minute Walkthrough</a>
+          <h2>Resolvemos los cinco. Normalmente empezamos por el gratuito.</h2>
+          <p>Este diagnóstico nos tomó menos de un día usando solo lo que cualquier cliente puede ver públicamente. Una sesión de trabajo con tu equipo toma unos 30 minutos y te deja con un plan priorizado — sin compromiso de ningún lado.</p>
+          <a class="btn" href="mailto:contact@edgebeyond.solutions?subject=Quiero%20agendar%20mi%20walkthrough%20de%2030%20minutos%20-%20Balneario%20Los%20Pinos&body=Hola%20equipo%20de%20EdgeBeyond%2C%0A%0AVi%20el%20Digital%20Presence%20Snapshot%20de%20Balneario%20Los%20Pinos%20y%20me%20gustar%C3%ADa%20agendar%20la%20sesi%C3%B3n%20gratuita%20de%2030%20minutos%20para%20revisar%20los%20hallazgos.%0A%0AGracias.">Agenda tu sesión gratuita de 30 minutos</a>
         </div>
       </div>
     </div>
@@ -468,7 +476,7 @@ RETURNCODE: 0
 
   <footer class="report-footer">
     <div class="container" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:.5rem;">
-      <span>Findings based on publicly available data as of August 24, 2026. Not a substitute for a full technical audit.</span>
+      <span>Hallazgos basados en datos disponibles públicamente al 24 de agosto de 2026. No sustituye una auditoría técnica completa.</span>
       <span>EdgeBeyond Solutions</span>
     </div>
   </footer>
