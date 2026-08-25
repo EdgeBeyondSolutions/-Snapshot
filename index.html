@@ -79,6 +79,20 @@
   </div>
 </header>
 
+<div id="file-protocol-banner" style="display:none; background:var(--amber-soft); border-bottom:1px solid var(--line);">
+  <div class="wrap" style="padding:14px 24px; font-size:.85rem; color:var(--ink-soft);">
+    ⚠️ Abriste este archivo directo — la generación automática necesita el servidor local.
+    Cierra esta pestaña y abre <strong>"Abrir Snapshot.command"</strong> (doble clic) en la
+    carpeta <span class="mono" style="font-family:var(--mono)">-Snapshot</span> en su lugar.
+    (El formulario manual sí funciona aquí abajo, sin servidor.)
+  </div>
+</div>
+<script>
+  if (location.protocol === "file:") {
+    document.getElementById("file-protocol-banner").style.display = "block";
+  }
+</script>
+
 <div class="wrap">
   <fieldset id="auto-fieldset">
     <legend>Generar automáticamente</legend>
