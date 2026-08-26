@@ -1,0 +1,462 @@
+RETURNCODE: 0
+
+--- STDOUT ---
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<title>Digital Presence Snapshot — Viñedos Los Rosales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #faf7f2;
+    --paper-2: #f1ece3;
+    --card: #ffffff;
+    --ink: #191512;
+    --ink-soft: #4a433c;
+    --ink-mute: #8a8073;
+    --line: rgba(25,21,18,.12);
+    --line-strong: rgba(25,21,18,.2);
+    --blue: #2e56c9;
+    --blue-ink: #1c3a91;
+    --blue-soft: rgba(46,86,201,.1);
+    --orange: #cc5200;
+    --orange-ink: #a04000;
+    --orange-soft: rgba(204,82,0,.1);
+    --green: #2f8f5b;
+    --green-soft: rgba(47,143,91,.12);
+    --amber: #b8860b;
+    --amber-soft: rgba(184,134,11,.14);
+    --shadow: 0 1px 2px rgba(25,21,18,.04);
+    --shadow-lg: 0 24px 60px -30px rgba(25,21,18,.35);
+    --display: "Archivo", -apple-system, sans-serif;
+    --body: "IBM Plex Sans", -apple-system, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #16130f;
+      --paper-2: #1e1a15;
+      --card: #211d18;
+      --ink: #f3efe8;
+      --ink-soft: #cfc7b9;
+      --ink-mute: #8f8577;
+      --line: rgba(243,239,232,.12);
+      --line-strong: rgba(243,239,232,.22);
+      --blue: #6f93e8;
+      --blue-ink: #a9c0f2;
+      --blue-soft: rgba(111,147,232,.16);
+      --orange: #e9803f;
+      --orange-ink: #f2a76e;
+      --orange-soft: rgba(233,128,63,.16);
+      --green: #5cba86;
+      --green-soft: rgba(92,186,134,.16);
+      --amber: #d8ab3f;
+      --amber-soft: rgba(216,171,63,.16);
+      --shadow: 0 1px 2px rgba(0,0,0,.3);
+      --shadow-lg: 0 24px 60px -30px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #16130f;
+    --paper-2: #1e1a15;
+    --card: #211d18;
+    --ink: #f3efe8;
+    --ink-soft: #cfc7b9;
+    --ink-mute: #8f8577;
+    --line: rgba(243,239,232,.12);
+    --line-strong: rgba(243,239,232,.22);
+    --blue: #6f93e8;
+    --blue-ink: #a9c0f2;
+    --blue-soft: rgba(111,147,232,.16);
+    --orange: #e9803f;
+    --orange-ink: #f2a76e;
+    --orange-soft: rgba(233,128,63,.16);
+    --green: #5cba86;
+    --green-soft: rgba(92,186,134,.16);
+    --amber: #d8ab3f;
+    --amber-soft: rgba(216,171,63,.16);
+    --shadow: 0 1px 2px rgba(0,0,0,.3);
+    --shadow-lg: 0 24px 60px -30px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--body); font-size: 16px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { display: block; max-width: 100%; }
+  h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.05; letter-spacing: -0.01em; text-wrap: balance; margin: 0; color: var(--ink); }
+  p { margin: 0; text-wrap: pretty; }
+  .container { max-width: 920px; margin-inline: auto; padding-inline: 28px; }
+  .mono { font-family: var(--mono); }
+
+  /* ===== Header / brand ===== */
+  .report-header { padding: 40px 0 0; }
+  .brand-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+  .brand-logo { height: 40px; width: auto; }
+  .brand-logo-cta { height: 34px; margin-inline: auto; }
+  .report-tag { font-family: var(--mono); font-size: .74rem; letter-spacing: .05em; color: var(--ink-mute); text-align: right; }
+  .report-tag strong { color: var(--ink-soft); }
+
+  /* ===== Hero / cover ===== */
+  .hero { padding: 56px 0 48px; }
+  .hero-eyebrow { font-family: var(--mono); font-size: .76rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); display: flex; align-items: center; gap: .6em; }
+  .hero-eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--orange); }
+  .hero h1 { font-size: clamp(2.1rem, 3.4vw + 1rem, 3.2rem); margin-top: .7rem; max-width: 16ch; }
+  .hero .lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 56ch; margin-top: 1rem; }
+
+  .grade-strip { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; margin-top: 2.6rem; padding: 1.8rem; background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+  .grade-big { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 110px; height: 110px; border-radius: 18px; background: var(--orange-soft); flex-shrink: 0; }
+  .grade-big .letter { font-family: var(--display); font-weight: 900; font-size: 3rem; line-height: 1; color: var(--orange-ink); }
+  .grade-big .caption { font-family: var(--mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mute); margin-top: 2px; }
+  .grade-summary h2 { font-size: 1.25rem; }
+  .grade-summary p { margin-top: .5rem; color: var(--ink-soft); font-size: .95rem; max-width: 54ch; }
+  .pillar-scores { display: flex; gap: 1.6rem; margin-top: 1.1rem; flex-wrap: wrap; }
+  .pillar-score { display: flex; align-items: center; gap: .5em; }
+  .pillar-score .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .pillar-score .label { font-family: var(--mono); font-size: .72rem; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .04em; }
+  .pillar-score .val { font-family: var(--mono); font-weight: 700; font-size: .8rem; color: var(--ink); }
+
+  /* ===== Section shell ===== */
+  .section { padding: 52px 0; border-top: 1px solid var(--line); }
+  .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.8rem; }
+  .section-head .kicker { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mute); }
+  .section-head h2 { font-size: clamp(1.5rem, 1.6vw + 1rem, 2rem); margin-top: .35rem; }
+  .section-grade { display: flex; align-items: center; gap: .7em; padding: .5em .9em; border-radius: 100px; font-family: var(--mono); font-weight: 700; font-size: .85rem; flex-shrink: 0; }
+  .section-grade.critical { background: var(--orange-soft); color: var(--orange-ink); }
+  .section-grade.warn { background: var(--amber-soft); color: var(--amber); }
+  .section-grade.pass { background: var(--green-soft); color: var(--green); }
+
+  .finding-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .finding { padding: 1.4rem 1.5rem; background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+  .finding-head { display: flex; align-items: center; gap: .6em; margin-bottom: .5rem; }
+  .status-chip { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .status-chip svg { width: 13px; height: 13px; }
+  .status-chip.critical { background: var(--orange); color: #fff; }
+  .status-chip.warn { background: var(--amber); color: #fff; }
+  .status-chip.pass { background: var(--green); color: #fff; }
+  .finding h4 { font-size: .98rem; font-weight: 700; }
+  .finding p { margin-top: .5rem; font-size: .88rem; color: var(--ink-soft); }
+  .finding .evidence { margin-top: .7rem; font-family: var(--mono); font-size: .74rem; color: var(--ink-mute); padding: .6em .8em; background: var(--paper-2); border-radius: 8px; overflow-wrap: anywhere; }
+
+  /* ===== Quick wins ===== */
+  .wins-list { display: grid; gap: .9rem; margin-top: 1.8rem; }
+  .win { display: grid; grid-template-columns: 44px 1fr; gap: 1.1rem; padding: 1.3rem 1.5rem; background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); align-items: start; }
+  .win-num { font-family: var(--display); font-weight: 900; font-size: 1.5rem; color: var(--orange); line-height: 1.3; }
+  .win h4 { font-size: 1rem; }
+  .win p { margin-top: .4rem; font-size: .88rem; color: var(--ink-soft); }
+  .win .impact { display: inline-flex; margin-top: .6rem; font-family: var(--mono); font-size: .68rem; letter-spacing: .05em; text-transform: uppercase; color: var(--blue-ink); background: var(--blue-soft); padding: .3em .7em; border-radius: 100px; }
+
+  /* ===== CTA ===== */
+  .cta { margin-top: 20px; padding: 48px 40px; background: var(--ink); border-radius: 22px; text-align: center; }
+  .cta-inner { max-width: 46ch; margin-inline: auto; }
+  .cta .brand-logo-cta { display: block; margin-bottom: 1.2rem; }
+  .cta h2 { color: var(--paper); font-size: clamp(1.4rem, 1.8vw + 1rem, 1.9rem); }
+  .cta p { color: color-mix(in srgb, var(--paper) 70%, transparent); margin-top: .8rem; font-size: .95rem; }
+  .cta .btn { display: inline-flex; margin-top: 1.6rem; padding: .95em 2em; background: var(--orange); color: #fff; font-family: var(--body); font-weight: 700; font-size: .95rem; border-radius: 100px; text-decoration: none; }
+
+  footer.report-footer { padding: 28px 0 60px; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-family: var(--mono); font-size: .72rem; color: var(--ink-mute); }
+
+  @media (max-width: 640px) {
+    .grade-strip { grid-template-columns: 1fr; text-align: center; }
+    .grade-summary .pillar-scores { justify-content: center; }
+    .cta { padding: 40px 22px; }
+  }
+
+  /* ===== Print: one section per page, nothing cut mid-block ===== */
+  @media print {
+    @page { size: letter; margin: 0.55in 0.5in; }
+    body { background: var(--paper); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .hero { break-after: page; page-break-after: always; }
+    .section { break-before: page; page-break-before: always; break-inside: avoid; border-top: none; padding-top: 0; }
+    .section:first-of-type { break-before: auto; page-break-before: auto; }
+    .grade-strip, .finding, .win, .cta, .brand-row {
+      break-inside: avoid; page-break-inside: avoid;
+    }
+    .finding-grid, .wins-list { break-inside: avoid; }
+    .cta { break-before: page; page-break-before: always; break-inside: avoid; }
+    .report-footer { break-before: auto; }
+    a[href]::after { content: ""; }
+  }
+
+  /* ===== Flat illustrations ===== */
+  .hero-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; }
+  .hero-copy-col { flex: 1; min-width: 0; }
+  .hero-illo { width: 128px; height: 128px; flex-shrink: 0; }
+  .section-head-row { display: flex; align-items: center; gap: 1.1rem; }
+  .section-icon { width: 60px; height: 60px; flex-shrink: 0; }
+  @media (max-width: 700px) {
+    .hero-top { flex-direction: column-reverse; }
+    .hero-illo { width: 92px; height: 92px; }
+    .section-icon { width: 46px; height: 46px; }
+  }
+  @media print {
+    .hero-illo { width: 100px; height: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="report-header">
+  <div class="container">
+    <div class="brand-row">
+      <div>
+        <img class="brand-logo" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
+      </div>
+      <div class="report-tag">SNAPSHOT DE PRESENCIA DIGITAL<br><strong>Preparado para Viñedos Los Rosales</strong> · 25 de agosto de 2026</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-top">
+        <div class="hero-copy-col">
+          <p class="hero-eyebrow">Reporte gratuito</p>
+          <h1>56 años de historia. Un sitio que se quedó en 2019.</h1>
+          <p class="lede">Revisamos exactamente lo que cualquier persona ve hoy desde su teléfono al buscar "Viñedos Los Rosales": tu sitio web, tu Perfil de Negocio de Google y tus redes sociales — desde la perspectiva de alguien que está decidiendo si reservar contigo o con el viñedo de al lado.</p>
+        </div>
+        <svg class="hero-illo" viewBox="0 0 100 100" aria-hidden="true">
+          <rect x="18" y="8" width="47" height="80" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="2"/>
+          <rect x="26" y="20" width="31" height="4.5" rx="2.25" fill="var(--blue)" opacity=".55"/>
+          <rect x="26" y="31" width="23" height="4.5" rx="2.25" fill="var(--ink-mute)" opacity=".4"/>
+          <rect x="26" y="42" width="27" height="4.5" rx="2.25" fill="var(--ink-mute)" opacity=".4"/>
+          <rect x="26" y="53" width="18" height="4.5" rx="2.25" fill="var(--ink-mute)" opacity=".4"/>
+          <circle cx="69" cy="62" r="17" fill="none" stroke="var(--orange)" stroke-width="5.5"/>
+          <line x1="81" y1="74" x2="93" y2="86" stroke="var(--orange)" stroke-width="6.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="grade-strip">
+        <div class="grade-big">
+          <span class="letter">C-</span>
+          <span class="caption">General</span>
+        </div>
+        <div class="grade-summary">
+          <h2>Un viñedo con más de 50 años de historia que su presencia en línea no cuenta</h2>
+          <p>Viñedos Los Rosales cultiva en Tequisquiapan desde 1970 y fue el primer viñedo de Querétaro en producir vino con uva Salvador (Tintorera) — una trayectoria que la mayoría de tus competidores no tiene. En línea esa autoridad no se nota igual: tu sitio destaca contenido de hace siete años, tus reseñas repiten la misma queja de servicio una y otra vez, y tu negocio aparece dividido en dos páginas de Facebook distintas.</p>
+          <div class="pillar-scores">
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Sitio Web</span><span class="val">D</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Perfil de Google</span><span class="val">B</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Redes Sociales</span><span class="val">B</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Directorios</span><span class="val">C</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLAR 01 — WEBSITE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-row">
+          <svg class="section-icon" viewBox="0 0 100 100" aria-hidden="true">
+            <rect x="8" y="20" width="84" height="60" rx="9" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="2"/>
+            <rect x="8" y="20" width="84" height="15" rx="9" fill="var(--blue)" opacity=".16"/>
+            <circle cx="19" cy="27.5" r="2.6" fill="var(--orange)"/>
+            <circle cx="28" cy="27.5" r="2.6" fill="var(--amber)"/>
+            <circle cx="37" cy="27.5" r="2.6" fill="var(--green)"/>
+            <rect x="19" y="46" width="44" height="5" rx="2.5" fill="var(--ink-mute)" opacity=".35"/>
+            <rect x="19" y="58" width="32" height="5" rx="2.5" fill="var(--ink-mute)" opacity=".35"/>
+            <rect x="19" y="70" width="38" height="5" rx="2.5" fill="var(--ink-mute)" opacity=".35"/>
+            <circle cx="78" cy="62" r="16" fill="var(--orange)"/>
+            <rect x="75.5" y="53" width="5" height="13" rx="2.5" fill="#fff"/>
+            <circle cx="78" cy="70.5" r="2.6" fill="#fff"/>
+          </svg>
+          <div>
+            <p class="kicker">Pilar 01 — Sitio Web</p>
+            <h2>vinedoslosrosales.com.mx sigue destacando la vendimia de 2019</h2>
+          </div>
+        </div>
+        <span class="section-grade critical">Calificación D</span>
+      </div>
+      <div class="finding-grid">
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>El contenido principal del sitio tiene siete años de antigüedad</h4></div>
+          <p>El apartado destacado de la página de inicio sigue promocionando la "Vendimia 2019" como su contenido más reciente. Un visitante que busca "viñedo Tequisquiapan" hoy en 2026 llega a un sitio que parece abandonado, aunque el negocio sigue operando activamente.</p>
+          <div class="evidence">Sección destacada del home: "VENDIMIA 2019"</div>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>No hay teléfono ni correo visibles en la página de contacto</h4></div>
+          <p>La página de contacto solo ofrece un formulario, sin número telefónico ni correo directo publicados. Para un negocio de bodas, recorridos y eventos —donde muchas reservas se cierran por WhatsApp o llamada el mismo día— obligar a todo prospecto a pasar por un formulario sin respuesta garantizada es fricción que cuesta reservas.</p>
+          <div class="evidence">"Por favor contáctanos a través del siguiente formulario"</div>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>El sitio corre sobre una estructura de hace más de una década</h4></div>
+          <p>Las páginas están construidas como archivos PHP planos (nosotros.php, contacto.php) sin un diseño responsivo moderno de por medio, típico de sitios armados hace 10-15 años y nunca migrados. Eso limita qué tan bien se ve y funciona en el celular, que es donde la mayoría de tus visitantes te va a encontrar.</p>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>La ubicación y la oferta de servicios sí están claras</h4></div>
+          <p>El sitio comunica bien su historia, su dirección exacta (Km. 27 Carretera Tequisquiapan - Ezequiel Montes) y su menú de secciones (recorridos, vinos, bodas, festivales). La arquitectura básica de información está bien pensada, aunque el contenido detrás de ella esté desactualizado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLAR 02 — GOOGLE BUSINESS PROFILE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-row">
+          <svg class="section-icon" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M42 10c-15 0-27 12-27 27 0 20 27 51 27 51s27-31 27-51c0-15-12-27-27-27z" fill="var(--blue)"/>
+            <circle cx="42" cy="38" r="11" fill="var(--paper)"/>
+            <circle cx="77" cy="24" r="15" fill="var(--orange)"/>
+            <path d="M72 18.5c0-3.3 2.3-5.5 5.3-5.5 3 0 5.2 2 5.2 4.8 0 3.1-5.2 4.2-5.2 7.5" stroke="#fff" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+            <circle cx="77.3" cy="30.5" r="1.8" fill="#fff"/>
+            <g fill="none" stroke="var(--ink-mute)" stroke-width="1.7" opacity=".55">
+              <path d="M12 85l2.3-4.7 2.3 4.7 5.2.7-3.8 3.6.9 5.1-4.6-2.4-4.6 2.4.9-5.1-3.8-3.6z"/>
+              <path d="M29 85l2.3-4.7 2.3 4.7 5.2.7-3.8 3.6.9 5.1-4.6-2.4-4.6 2.4.9-5.1-3.8-3.6z"/>
+              <path d="M46 85l2.3-4.7 2.3 4.7 5.2.7-3.8 3.6.9 5.1-4.6-2.4-4.6 2.4.9-5.1-3.8-3.6z"/>
+            </g>
+          </svg>
+          <div>
+            <p class="kicker">Pilar 02 — Perfil de Negocio de Google</p>
+            <h2>4.4 estrellas con más de 900 reseñas, pero la misma queja se repite una y otra vez</h2>
+          </div>
+        </div>
+        <span class="section-grade pass">Calificación B</span>
+      </div>
+      <div class="finding-grid">
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Un volumen de reseñas que la mayoría de la competencia no tiene</h4></div>
+          <p>El perfil acumula una calificación de 4.4 estrellas con más de 900 reseñas — un nivel de prueba social que a un competidor nuevo le tomaría años construir. Esta es la base de credibilidad más fuerte que tiene el negocio en línea.</p>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>El mismo problema de servicio aparece reseña tras reseña</h4></div>
+          <p>Varias reseñas visibles públicamente describen el mismo patrón: servicio de alimentos lento y desorganizado, platillos servidos fríos o mal cocidos, y esperas de alrededor de una hora. Cuando un problema se repite en reseñas distintas sin respuesta visible del negocio, un prospecto que compara opciones lo lee como riesgo, no como excepción.</p>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>El punto de venta de vino se reporta con falta de personal</h4></div>
+          <p>Reseñas mencionan personal amable pero insuficiente en el área de compra de vino en horas de mayor afluencia. Es fricción justo en el paso donde un visitante que ya decidió comprar puede terminar yéndose sin hacerlo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLAR 03 — SOCIAL & LISTINGS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-row">
+          <svg class="section-icon" viewBox="0 0 100 100" aria-hidden="true">
+            <line x1="30" y1="30" x2="66" y2="22" stroke="var(--line-strong)" stroke-width="2" stroke-dasharray="4 4"/>
+            <line x1="30" y1="30" x2="37" y2="72" stroke="var(--line-strong)" stroke-width="2" stroke-dasharray="4 4"/>
+            <line x1="66" y1="22" x2="74" y2="70" stroke="var(--line-strong)" stroke-width="2" stroke-dasharray="4 4"/>
+            <rect x="10" y="18" width="38" height="25" rx="6" fill="var(--blue)"/>
+            <rect x="53" y="8" width="38" height="25" rx="6" fill="var(--orange)"/>
+            <rect x="20" y="60" width="38" height="25" rx="6" fill="var(--amber)"/>
+            <rect x="18" y="26" width="21" height="3" rx="1.5" fill="#fff" opacity=".85"/>
+            <rect x="18" y="33" width="14" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+            <rect x="61" y="16" width="21" height="3" rx="1.5" fill="#fff" opacity=".85"/>
+            <rect x="61" y="23" width="14" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+            <rect x="28" y="68" width="21" height="3" rx="1.5" fill="#fff" opacity=".85"/>
+            <rect x="28" y="75" width="14" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+          </svg>
+          <div>
+            <p class="kicker">Pilar 03 — Redes Sociales y Directorios</p>
+            <h2>Instagram activo, pero tu negocio vive dividido en dos páginas de Facebook</h2>
+          </div>
+        </div>
+        <span class="section-grade warn">Calificación B / C</span>
+      </div>
+      <div class="finding-grid">
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Instagram es tu canal social más sano</h4></div>
+          <p>@vinedoslosrosalestx tiene más de 4,200 seguidores y más de 650 publicaciones — una cuenta activa y sostenida en el tiempo, no un perfil abandonado. Es el canal que mejor está funcionando hoy para el negocio.</p>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Existen dos páginas de Facebook distintas para el mismo negocio</h4></div>
+          <p>Además de facebook.com/VinedosLosRosalesTx, encontramos una segunda página de Facebook con otro identificador para el mismo negocio ("Viñedos Los Rosales, Tequisquiapan"). Cada página duplicada divide seguidores, reseñas y mensajes entre dos bandejas de entrada distintas — y aumenta el riesgo de que un cliente le escriba a la página "equivocada" y nunca reciba respuesta.</p>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>La ficha de TripAdvisor muestra una reseña titulada "Don't bother!"</h4></div>
+          <p>En un directorio que el negocio no controla, una de las reseñas visibles en la ficha lleva por título "¡No vale la pena!" ("Don't bother!"). Es de las primeras impresiones que ve alguien que está comparando bodegas para visitar en Tequisquiapan, y hoy nadie del negocio parece estar gestionando esa conversación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FIX — QUICK WINS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="kicker">La solución — En orden</p>
+          <h2>Cinco movimientos, ordenados por lo que cuesta ignorarlos</h2>
+        </div>
+      </div>
+      <div class="wins-list">
+        <div class="win">
+          <span class="win-num">01</span>
+          <div>
+            <h4>Reclama y consolida tus dos páginas de Facebook en una sola</h4>
+            <p>Identifica cuál página tiene más actividad, redirige o fusiona la secundaria hacia ella y deja de perder seguidores, reseñas y mensajes divididos entre dos bandejas.</p>
+            <span class="impact">Mayor impacto · Gratis</span>
+          </div>
+        </div>
+        <div class="win">
+          <span class="win-num">02</span>
+          <div>
+            <h4>Publica un teléfono o WhatsApp directo en tu página de contacto</h4>
+            <p>No dependas solo de un formulario para reservas de bodas y recorridos: un número visible captura al visitante que quiere confirmar de inmediato, no mañana.</p>
+            <span class="impact">Captación de leads</span>
+          </div>
+        </div>
+        <div class="win">
+          <span class="win-num">03</span>
+          <div>
+            <h4>Responde públicamente a las reseñas sobre el servicio de alimentos</h4>
+            <p>Una respuesta pública y concreta (qué cambió, qué están haciendo distinto) en Google y TripAdvisor le dice al siguiente lector que el problema ya se atendió, en lugar de dejarlo como una queja sin resolver.</p>
+            <span class="impact">Riesgo reputacional</span>
+          </div>
+        </div>
+        <div class="win">
+          <span class="win-num">04</span>
+          <div>
+            <h4>Actualiza el contenido destacado del sitio</h4>
+            <p>Quita la "Vendimia 2019" del home y sustitúyela por la cosecha, eventos y festivales actuales. Contenido fresco es también la señal más básica que Google usa para saber que el negocio sigue activo.</p>
+            <span class="impact">Base de SEO</span>
+          </div>
+        </div>
+        <div class="win">
+          <span class="win-num">05</span>
+          <div>
+            <h4>Reconstruye el sitio sobre una base moderna y mobile-first</h4>
+            <p>Un sitio nuevo con formulario de contacto funcional y verificado, diseño responsivo real y estructura de captura de leads pondría el sitio a la altura de la trayectoria de 56 años del negocio.</p>
+            <span class="impact">Reconstrucción completa</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <div class="cta-inner">
+          <img class="brand-logo brand-logo-cta" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
+          <h2>Resolvemos los cinco. Normalmente empezamos por el gratuito.</h2>
+          <p>Este snapshot lo hicimos en menos de un día usando solo lo que es públicamente visible. Una sesión de trabajo con tu equipo toma unos 30 minutos y te deja con un plan priorizado — sin compromiso de ningún lado.</p>
+          <a class="btn" href="mailto:contact@edgebeyond.solutions?subject=Snapshot%20de%20Presencia%20Digital%20%E2%80%93%20Vi%C3%B1edos%20Los%20Rosales&body=Hola%2C%20vimos%20el%20Snapshot%20de%20Presencia%20Digital%20de%20Vi%C3%B1edos%20Los%20Rosales%20y%20nos%20gustar%C3%ADa%20agendar%20la%20llamada%20de%2030%20minutos%20sin%20costo.">Agenda tu llamada de 30 minutos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="report-footer">
+    <div class="container" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:.5rem;">
+      <span>Hallazgos basados en información públicamente disponible al 25 de agosto de 2026. No sustituye una auditoría técnica completa.</span>
+      <span>EdgeBeyond Solutions</span>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>
+
+
+--- STDERR ---
+
