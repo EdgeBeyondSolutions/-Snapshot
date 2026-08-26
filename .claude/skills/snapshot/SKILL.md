@@ -7,9 +7,11 @@ description: Generate a "Digital Presence Snapshot" lead-gen report (HTML, print
 
 Produces the same report format built for Terra Klean Solutions: a cold, evidence-based
 audit of a prospect's online presence, used as a free lead-magnet by EdgeBeyond Solutions
-to book a 30-minute walkthrough call. One HTML file, self-contained, viewable in the
-browser with a "Download PDF" button (native print dialog — the CSS is already tuned for
-clean pagination).
+to book a 30-minute walkthrough call. One self-contained HTML file — the report itself has
+no download/print button embedded; the `index.html` app's toolbar handles Download
+HTML/PDF (the native print dialog — the report's CSS is already tuned for clean
+pagination). Don't add a print button inside template.html/the generated report — that was
+tried and caused a visible duplicate with the app's own toolbar button.
 
 **Primary path:** `server.py` runs this exact playbook automatically — the user opens
 `index.html` at http://localhost:8787, types just the prospect's name (+ optionally
@@ -29,7 +31,7 @@ fallback form in `index.html` instead of the automated one.
   both the US and Mexico; if not specified, ask, or infer from context (a `.mx` domain, a
   Mexican city, Spanish-language site content). Write the ENTIRE report in that
   language — every heading, label, finding, quick win, and CTA, not just the findings —
-  translating fixed chrome text too ("Free Snapshot Report", "Grade", "Download PDF",
+  translating fixed chrome text too ("Free Snapshot Report", "Grade",
   pillar names, footer disclaimer). Keep the prospect's own business name and any verbatim
   evidence quotes exactly as found, untranslated. Spanish should read as natural business
   Spanish for Mexico (tú/informal but professional), not a literal word-for-word translation.

@@ -523,7 +523,6 @@ const REPORT_CSS = `
     .cta { break-before: page; page-break-before: always; break-inside: avoid; }
     .report-footer { break-before: auto; }
     a[href]::after { content: ""; }
-    .download-pdf-btn { display: none !important; }
   }
   .hero-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; }
   .hero-copy-col { flex: 1; min-width: 0; }
@@ -532,22 +531,12 @@ const REPORT_CSS = `
   .section-icon { width: 60px; height: 60px; flex-shrink: 0; }
   @media (max-width: 700px) { .hero-top { flex-direction: column-reverse; } .hero-illo { width: 92px; height: 92px; } .section-icon { width: 46px; height: 46px; } }
   @media print { .hero-illo { width: 100px; height: 100px; } }
-  .download-pdf-btn {
-    position: fixed; top: 22px; right: 28px; z-index: 50;
-    display: inline-flex; align-items: center; gap: .55em;
-    padding: .7em 1.3em; background: var(--ink); color: var(--paper);
-    font-family: var(--body); font-weight: 700; font-size: .85rem;
-    border: none; border-radius: 100px; cursor: pointer; box-shadow: var(--shadow-lg);
-  }
-  .download-pdf-btn:hover { background: var(--orange); }
-  .download-pdf-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 `;
 
 const STRINGS = {
   en: {
     htmlLang: "en",
     titleTag: name => `Digital Presence Snapshot — ${name}`,
-    downloadPdf: "Download PDF",
     reportTagLabel: "DIGITAL PRESENCE SNAPSHOT",
     preparedFor: name => `Prepared for ${name}`,
     freeSnapshotReport: "Free Snapshot Report",
@@ -569,7 +558,6 @@ const STRINGS = {
   es: {
     htmlLang: "es",
     titleTag: name => `Diagnóstico de Presencia Digital — ${name}`,
-    downloadPdf: "Descargar PDF",
     reportTagLabel: "DIAGNÓSTICO DE PRESENCIA DIGITAL",
     preparedFor: name => `Preparado para ${name}`,
     freeSnapshotReport: "Diagnóstico Gratuito",
@@ -616,10 +604,6 @@ function buildReportHtml(d) {
 <style>${REPORT_CSS}</style>
 </head>
 <body>
-<button class="download-pdf-btn" onclick="window.print()" aria-label="${t.downloadPdf}">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
-  <span>${t.downloadPdf}</span>
-</button>
 <header class="report-header">
   <div class="container">
     <div class="brand-row">
