@@ -91,6 +91,18 @@ Findings get a status chip: `critical` (real problem, costs leads), `warn` (real
 lower-stakes), `pass` (genuinely fine — include 1 pass finding per pillar where honestly
 earned, it makes the critical ones more credible).
 
+Two guardrails, added after a copy review flagged both:
+
+- **Never state a generic statistic you can't attribute** (e.g. "90% of buyers look online
+  first"). It undermines a report whose whole pitch is "evidence-first" if the prospect
+  fact-checks it and it's unsourced. Make the same point with something you *can* stand
+  behind: the business's own verified gap (no GBP reviews, no working contact form), not an
+  invented industry-wide number.
+- **When a finding involves a false or outdated trust claim** (e.g. a site claims an
+  accreditation it doesn't have), frame it as something that likely slipped through when
+  the site/listing was built, not as a deliberate misrepresentation — the fact itself
+  (verified against the real source) does the persuading; don't editorialize about intent.
+
 - **Hero H1**: a short, specific tension statement about this business (≤16 characters
   wide is not a rule, just keep it punchy — see Terra Klean's "Your business is doing the
   work. Your internet presence isn't backing it up.").
@@ -109,8 +121,11 @@ earned, it makes the critical ones more credible).
   first — claiming a free GBP listing typically ranks #1). Each gets a short `impact` tag
   (e.g. "Highest impact · Free", "Reputation risk", "SEO foundation", "Lead capture", "Full
   rebuild").
-- **CTA**: keep EdgeBeyond Solutions branding and the mailto pattern fixed; only the
-  subject/body query params change per prospect (URL-encode them).
+- **CTA**: keep EdgeBeyond Solutions branding fixed. The button links to the real Google
+  Calendar booking page — `https://calendar.app.google/1GFwXDncbppQ1RHn6`, `target="_blank"
+  rel="noopener"` — not a `mailto:` link. This is intentional: a real scheduling link is
+  actual lead capture (name/email/time collected by Google), where a mailto is not. The
+  same fixed URL is used for every prospect — nothing to customize per report.
 
 ## Step 4 — Hand off the content
 

@@ -2,10 +2,10 @@ RETURNCODE: 0
 
 --- STDOUT ---
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Digital Presence Snapshot — Viñedos Los Rosales</title>
+<title>Digital Presence Snapshot — Rustic Metal Signs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
@@ -172,12 +172,11 @@ RETURNCODE: 0
     @page { size: letter; margin: 0.55in 0.5in; }
     body { background: var(--paper); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .hero { break-after: page; page-break-after: always; }
-    .section { break-before: page; page-break-before: always; break-inside: avoid; border-top: none; padding-top: 0; }
+    .section { break-before: page; page-break-before: always; border-top: none; padding-top: 0; }
     .section:first-of-type { break-before: auto; page-break-before: auto; }
     .grade-strip, .finding, .win, .cta, .brand-row {
       break-inside: avoid; page-break-inside: avoid;
     }
-    .finding-grid, .wins-list { break-inside: avoid; }
     .cta { break-before: page; page-break-before: always; break-inside: avoid; }
     .report-footer { break-before: auto; }
     a[href]::after { content: ""; }
@@ -207,7 +206,7 @@ RETURNCODE: 0
       <div>
         <img class="brand-logo" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
       </div>
-      <div class="report-tag">SNAPSHOT DE PRESENCIA DIGITAL<br><strong>Preparado para Viñedos Los Rosales</strong> · 25 de agosto de 2026</div>
+      <div class="report-tag">DIGITAL PRESENCE SNAPSHOT<br><strong>Prepared for Rustic Metal Signs</strong> · August 27, 2026</div>
     </div>
   </div>
 </header>
@@ -217,9 +216,9 @@ RETURNCODE: 0
     <div class="container">
       <div class="hero-top">
         <div class="hero-copy-col">
-          <p class="hero-eyebrow">Reporte gratuito</p>
-          <h1>56 años de historia. Un sitio que se quedó en 2019.</h1>
-          <p class="lede">Revisamos exactamente lo que cualquier persona ve hoy desde su teléfono al buscar "Viñedos Los Rosales": tu sitio web, tu Perfil de Negocio de Google y tus redes sociales — desde la perspectiva de alguien que está decidiendo si reservar contigo o con el viñedo de al lado.</p>
+          <p class="hero-eyebrow">Free Snapshot Report</p>
+          <h1>Real craftsmanship. Scattered footprint.</h1>
+          <p class="lede">Note on sourcing: the website link supplied for this audit (durhamlawsociety.co.uk) turned out to belong to an unrelated UK university law society, not this business — this snapshot instead audits the actual site we located at rusticmetalsigns.com, plus the Facebook, Instagram, and directory listings provided for the Waco, TX metal-sign shop. We looked at what a customer searching "custom metal signs Waco" would actually find tonight, on their phone.</p>
         </div>
         <svg class="hero-illo" viewBox="0 0 100 100" aria-hidden="true">
           <rect x="18" y="8" width="47" height="80" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="2"/>
@@ -235,16 +234,16 @@ RETURNCODE: 0
       <div class="grade-strip">
         <div class="grade-big">
           <span class="letter">C-</span>
-          <span class="caption">General</span>
+          <span class="caption">Overall</span>
         </div>
         <div class="grade-summary">
-          <h2>Un viñedo con más de 50 años de historia que su presencia en línea no cuenta</h2>
-          <p>Viñedos Los Rosales cultiva en Tequisquiapan desde 1970 y fue el primer viñedo de Querétaro en producir vino con uva Salvador (Tintorera) — una trayectoria que la mayoría de tus competidores no tiene. En línea esa autoridad no se nota igual: tu sitio destaca contenido de hace siete años, tus reseñas repiten la misma queja de servicio una y otra vez, y tu negocio aparece dividido en dos páginas de Facebook distintas.</p>
+          <h2>A working ecommerce shop that Google can't quite find</h2>
+          <p>Rustic Metal Signs has a genuinely active Instagram (604 followers, bilingual outreach) and a real online store with cart and checkout — the raw ingredients of a strong local business are there. But the profile that matters most for local search, Google Business, doesn't surface with reviews in the searches that should return it first, and the address on file splits between "Waco" (used everywhere in marketing) and "Lacy-Lakeview" (used in directories) — a mismatch that costs map-pack ranking before a customer ever sees the craftsmanship.</p>
           <div class="pillar-scores">
-            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Sitio Web</span><span class="val">D</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Perfil de Google</span><span class="val">B</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Redes Sociales</span><span class="val">B</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Directorios</span><span class="val">C</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Website</span><span class="val">B-</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Google Profile</span><span class="val">D</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Social</span><span class="val">B-</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Listings</span><span class="val">D</span></div>
           </div>
         </div>
       </div>
@@ -270,30 +269,24 @@ RETURNCODE: 0
             <circle cx="78" cy="70.5" r="2.6" fill="#fff"/>
           </svg>
           <div>
-            <p class="kicker">Pilar 01 — Sitio Web</p>
-            <h2>vinedoslosrosales.com.mx sigue destacando la vendimia de 2019</h2>
+            <p class="kicker">Pillar 01 — Website</p>
+            <h2>rusticmetalsigns.com sells real products — but tells no story</h2>
           </div>
         </div>
-        <span class="section-grade critical">Calificación D</span>
+        <span class="section-grade warn">Grade B-</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>El contenido principal del sitio tiene siete años de antigüedad</h4></div>
-          <p>El apartado destacado de la página de inicio sigue promocionando la "Vendimia 2019" como su contenido más reciente. Un visitante que busca "viñedo Tequisquiapan" hoy en 2026 llega a un sitio que parece abandonado, aunque el negocio sigue operando activamente.</p>
-          <div class="evidence">Sección destacada del home: "VENDIMIA 2019"</div>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Real ecommerce, not just a phone number</h4></div>
+          <p>The site runs individual product pages (a Waco logo sign, custom signage, grills, decor) with a shopping cart and prices in the $5–$85 range, letting a customer buy without ever picking up the phone. That's a genuine lead/sale-capture mechanism most local fabricators skip in favor of "call us."</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>No hay teléfono ni correo visibles en la página de contacto</h4></div>
-          <p>La página de contacto solo ofrece un formulario, sin número telefónico ni correo directo publicados. Para un negocio de bodas, recorridos y eventos —donde muchas reservas se cierran por WhatsApp o llamada el mismo día— obligar a todo prospecto a pasar por un formulario sin respuesta garantizada es fricción que cuesta reservas.</p>
-          <div class="evidence">"Por favor contáctanos a través del siguiente formulario"</div>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No trust-building content surfaced anywhere</h4></div>
+          <p>Every page we could locate through the site and search results is product-focused — no visible about/story section, no owner background, no customer testimonials. Shoppers comparing rustic-sign makers (Rustic Metalz, Rusty Rooster Metal, R&D Metal Works all show up in the same searches) have nothing on-site to tell them why to pick this shop over the next tab.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>El sitio corre sobre una estructura de hace más de una década</h4></div>
-          <p>Las páginas están construidas como archivos PHP planos (nosotros.php, contacto.php) sin un diseño responsivo moderno de por medio, típico de sitios armados hace 10-15 años y nunca migrados. Eso limita qué tan bien se ve y funciona en el celular, que es donde la mayoría de tus visitantes te va a encontrar.</p>
-        </div>
-        <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>La ubicación y la oferta de servicios sí están claras</h4></div>
-          <p>El sitio comunica bien su historia, su dirección exacta (Km. 27 Carretera Tequisquiapan - Ezequiel Montes) y su menú de secciones (recorridos, vinos, bodas, festivales). La arquitectura básica de información está bien pensada, aunque el contenido detrás de ella esté desactualizado.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No reviews or social proof linked from the store</h4></div>
+          <p>Nothing on the storefront points to the Facebook or Instagram activity, or to any third-party reviews — the 604-follower Instagram and 572-like Facebook page exist as islands, disconnected from the page where a customer actually decides to buy.</p>
         </div>
       </div>
     </div>
@@ -317,24 +310,24 @@ RETURNCODE: 0
             </g>
           </svg>
           <div>
-            <p class="kicker">Pilar 02 — Perfil de Negocio de Google</p>
-            <h2>4.4 estrellas con más de 900 reseñas, pero la misma queja se repite una y otra vez</h2>
+            <p class="kicker">Pillar 02 — Google Business Profile</p>
+            <h2>The profile that should win "custom metal signs Waco" isn't showing up</h2>
           </div>
         </div>
-        <span class="section-grade pass">Calificación B</span>
+        <span class="section-grade critical">Grade D</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Un volumen de reseñas que la mayoría de la competencia no tiene</h4></div>
-          <p>El perfil acumula una calificación de 4.4 estrellas con más de 900 reseñas — un nivel de prueba social que a un competidor nuevo le tomaría años construir. Esta es la base de credibilidad más fuerte que tiene el negocio en línea.</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>No Google Maps listing with reviews surfaced in search</h4></div>
+          <p>Searching directly for the business's Google Business Profile returns Yelp, Yahoo Local, and Facebook — but no Google Maps listing showing a star rating or review count appears in the results. For a local fabrication shop, that map-pack spot is usually the first thing a nearby customer sees; right now a competitor is winning it by default.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>El mismo problema de servicio aparece reseña tras reseña</h4></div>
-          <p>Varias reseñas visibles públicamente describen el mismo patrón: servicio de alimentos lento y desorganizado, platillos servidos fríos o mal cocidos, y esperas de alrededor de una hora. Cuando un problema se repite en reseñas distintas sin respuesta visible del negocio, un prospecto que compara opciones lo lee como riesgo, no como excepción.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Zero visible reviews means zero visible social proof</h4></div>
+          <p>No public review count or rating could be found for this business, while a nearby competitor in the same search results (JDH Iron Designs) shows 12 Yelp reviews. A shopper comparing options before calling sees proof for one shop and nothing for the other.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>El punto de venta de vino se reporta con falta de personal</h4></div>
-          <p>Reseñas mencionan personal amable pero insuficiente en el área de compra de vino en horas de mayor afluencia. Es fricción justo en el paso donde un visitante que ya decidió comprar puede terminar yéndose sin hacerlo.</p>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>The phone number itself is solid and consistent</h4></div>
+          <p>254-301-5356 appears identically on Instagram and on the Yahoo Local aggregator — a clean, unambiguous number to anchor a claimed and optimized profile around once it's built out.</p>
         </div>
       </div>
     </div>
@@ -360,24 +353,30 @@ RETURNCODE: 0
             <rect x="28" y="75" width="14" height="3" rx="1.5" fill="#fff" opacity=".6"/>
           </svg>
           <div>
-            <p class="kicker">Pilar 03 — Redes Sociales y Directorios</p>
-            <h2>Instagram activo, pero tu negocio vive dividido en dos páginas de Facebook</h2>
+            <p class="kicker">Pillar 03 — Social &amp; Listings</p>
+            <h2>Social is genuinely active; the directory data underneath it isn't</h2>
           </div>
         </div>
-        <span class="section-grade warn">Calificación B / C</span>
+        <span class="section-grade warn">Grade B- / D</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Instagram es tu canal social más sano</h4></div>
-          <p>@vinedoslosrosalestx tiene más de 4,200 seguidores y más de 650 publicaciones — una cuenta activa y sostenida en el tiempo, no un perfil abandonado. Es el canal que mejor está funcionando hoy para el negocio.</p>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Instagram is a real, working channel</h4></div>
+          <p>604 followers, 218 following, and recent posts spanning grills, benches, signage, and belt buckles, with bilingual outreach ("Hablamos Español") in the bio. This is an active account a real customer would trust, not a dormant placeholder.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Existen dos páginas de Facebook distintas para el mismo negocio</h4></div>
-          <p>Además de facebook.com/VinedosLosRosalesTx, encontramos una segunda página de Facebook con otro identificador para el mismo negocio ("Viñedos Los Rosales, Tequisquiapan"). Cada página duplicada divide seguidores, reseñas y mensajes entre dos bandejas de entrada distintas — y aumenta el riesgo de que un cliente le escriba a la página "equivocada" y nunca reciba respuesta.</p>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Facebook is active too</h4></div>
+          <p>572 likes with photos posted, giving the business two consistent, real social channels — the foundation most local shops never bother to build.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>La ficha de TripAdvisor muestra una reseña titulada "Don't bother!"</h4></div>
-          <p>En un directorio que el negocio no controla, una de las reseñas visibles en la ficha lleva por título "¡No vale la pena!" ("Don't bother!"). Es de las primeras impresiones que ve alguien que está comparando bodegas para visitar en Tequisquiapan, y hoy nadie del negocio parece estar gestionando esa conversación.</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Yelp lists the shop as open 24 hours, every day</h4></div>
+          <p>The Yelp listing shows "Open 24 Hours" for all seven days of the week — implausible for a metal-fabrication shop and a strong signal the listing was never claimed or corrected. A customer checking hours before a drive-out gets no usable information.</p>
+          <div class="evidence">Yelp listing hours: "Open 24 Hours" — Thursday through Wednesday, all 7 days</div>
+        </div>
+        <div class="finding">
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>The city name doesn't agree across listings</h4></div>
+          <p>Yahoo Local lists the address as "1261 Coxs Oak Valley Dr, Waco, TX 76705," while Yelp lists the identical street address as "Lacy-Lakeview, Texas" — and the brand itself markets as "Waco, TX" on Instagram and Facebook. Google and other search engines weigh exact address consistency heavily; a name that can't agree with itself on city loses ranking ground to competitors whose listings match cleanly.</p>
+          <div class="evidence">Yahoo Local: "1261 Coxs Oak Valley Dr Waco, TX 76705" — Yelp: "1261 Coxs Oak Valley Dr, Lacy-Lakeview, Texas"</div>
         </div>
       </div>
     </div>
@@ -388,49 +387,49 @@ RETURNCODE: 0
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="kicker">La solución — En orden</p>
-          <h2>Cinco movimientos, ordenados por lo que cuesta ignorarlos</h2>
+          <p class="kicker">The Fix — In Order</p>
+          <h2>Five moves, ranked by how much they cost to ignore</h2>
         </div>
       </div>
       <div class="wins-list">
         <div class="win">
           <span class="win-num">01</span>
           <div>
-            <h4>Reclama y consolida tus dos páginas de Facebook en una sola</h4>
-            <p>Identifica cuál página tiene más actividad, redirige o fusiona la secundaria hacia ella y deja de perder seguidores, reseñas y mensajes divididos entre dos bandejas.</p>
-            <span class="impact">Mayor impacto · Gratis</span>
+            <h4>Claim and fully build out the Google Business Profile</h4>
+            <p>Right now the profile doesn't surface with reviews in searches that should return it first. Claiming it, adding photos, and setting the city consistently to Waco is free and is usually the single highest-leverage fix available.</p>
+            <span class="impact">Highest impact · Free</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">02</span>
           <div>
-            <h4>Publica un teléfono o WhatsApp directo en tu página de contacto</h4>
-            <p>No dependas solo de un formulario para reservas de bodas y recorridos: un número visible captura al visitante que quiere confirmar de inmediato, no mañana.</p>
-            <span class="impact">Captación de leads</span>
+            <h4>Correct the "Open 24 Hours" Yelp listing</h4>
+            <p>An implausible, unmanaged-looking hours field undercuts credibility the moment a prospect checks it. Claiming the Yelp listing and entering real hours takes minutes and removes an obvious red flag.</p>
+            <span class="impact">Reputation risk</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">03</span>
           <div>
-            <h4>Responde públicamente a las reseñas sobre el servicio de alimentos</h4>
-            <p>Una respuesta pública y concreta (qué cambió, qué están haciendo distinto) en Google y TripAdvisor le dice al siguiente lector que el problema ya se atendió, en lugar de dejarlo como una queja sin resolver.</p>
-            <span class="impact">Riesgo reputacional</span>
+            <h4>Standardize the city name across every directory</h4>
+            <p>Pick one city — Waco, to match the brand's own marketing — and update Yelp, Yahoo Local, and any other directory currently showing Lacy-Lakeview. Consistent NAP data is a foundational local-SEO signal, not a cosmetic detail.</p>
+            <span class="impact">SEO foundation</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">04</span>
           <div>
-            <h4>Actualiza el contenido destacado del sitio</h4>
-            <p>Quita la "Vendimia 2019" del home y sustitúyela por la cosecha, eventos y festivales actuales. Contenido fresco es también la señal más básica que Google usa para saber que el negocio sigue activo.</p>
-            <span class="impact">Base de SEO</span>
+            <h4>Add a real story and testimonials to rusticmetalsigns.com</h4>
+            <p>The store sells well but says nothing about who's behind it. A short about section plus a few customer quotes pulled from the active Instagram/Facebook following would give shoppers a reason to choose this shop over the several other Waco-area sign makers competing for the same searches.</p>
+            <span class="impact">Lead capture</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">05</span>
           <div>
-            <h4>Reconstruye el sitio sobre una base moderna y mobile-first</h4>
-            <p>Un sitio nuevo con formulario de contacto funcional y verificado, diseño responsivo real y estructura de captura de leads pondría el sitio a la altura de la trayectoria de 56 años del negocio.</p>
-            <span class="impact">Reconstrucción completa</span>
+            <h4>Actively collect reviews from the existing customer base</h4>
+            <p>With 604 Instagram followers and 572 Facebook likes already engaged, a simple ask-for-a-review campaign could build the review count that's currently missing from Google and Yelp alike — turning an already-active audience into visible social proof.</p>
+            <span class="impact">Reputation build</span>
           </div>
         </div>
       </div>
@@ -438,9 +437,9 @@ RETURNCODE: 0
       <div class="cta">
         <div class="cta-inner">
           <img class="brand-logo brand-logo-cta" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
-          <h2>Resolvemos los cinco. Normalmente empezamos por el gratuito.</h2>
-          <p>Este snapshot lo hicimos en menos de un día usando solo lo que es públicamente visible. Una sesión de trabajo con tu equipo toma unos 30 minutos y te deja con un plan priorizado — sin compromiso de ningún lado.</p>
-          <a class="btn" href="mailto:contact@edgebeyond.solutions?subject=Snapshot%20de%20Presencia%20Digital%20%E2%80%93%20Vi%C3%B1edos%20Los%20Rosales&body=Hola%2C%20vimos%20el%20Snapshot%20de%20Presencia%20Digital%20de%20Vi%C3%B1edos%20Los%20Rosales%20y%20nos%20gustar%C3%ADa%20agendar%20la%20llamada%20de%2030%20minutos%20sin%20costo.">Agenda tu llamada de 30 minutos</a>
+          <h2>We fix all five. Usually starting with the free one.</h2>
+          <p>This snapshot took us under a day using only what's publicly visible. A working session with your team takes about 30 minutes and leaves you with a prioritized plan — no obligation either way.</p>
+          <a class="btn" href="https://calendar.app.google/1GFwXDncbppQ1RHn6" target="_blank" rel="noopener">Book the 30-Minute Walkthrough</a>
         </div>
       </div>
     </div>
@@ -448,7 +447,7 @@ RETURNCODE: 0
 
   <footer class="report-footer">
     <div class="container" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:.5rem;">
-      <span>Hallazgos basados en información públicamente disponible al 25 de agosto de 2026. No sustituye una auditoría técnica completa.</span>
+      <span>Findings based on publicly available data as of August 27, 2026. Not a substitute for a full technical audit.</span>
       <span>EdgeBeyond Solutions</span>
     </div>
   </footer>
