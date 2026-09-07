@@ -147,6 +147,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
         if result.returncode != 0:
             detail = (result.stderr or result.stdout or "").strip()[-2000:] or "(sin detalle)"
+            if "OAuth session expired" in detail or "Failed to authenticate" in detail:
+                self.send_json(500, {"error": "Tu sesión de Claude Code expiró. Abre Terminal, corre \"claude auth\" para volver a iniciar sesión, y vuelve a intentar."})
+                return
             self.send_json(500, {"error": f"Claude CLI falló: {detail}"})
             return
 

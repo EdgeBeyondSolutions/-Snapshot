@@ -33,6 +33,7 @@
   legend { font-family: var(--mono); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--orange); padding: 0 8px; }
   fieldset h3 { font-size: 1.05rem; margin-bottom: 4px; }
   .hint { font-size: .82rem; color: var(--ink-mute); margin: 4px 0 14px; }
+  .status-error { font-size: .85rem; font-weight: 600; color: var(--orange-ink); background: var(--orange-soft); border: 1px solid var(--orange); border-radius: 10px; padding: .9em 1.1em; margin: 12px 0; white-space: pre-line; }
   label { display: block; font-size: .78rem; font-weight: 600; color: var(--ink-soft); margin: 12px 0 4px; }
   input[type=text], input[type=date], input[type=email], textarea, select {
     width: 100%; font-family: var(--body); font-size: .92rem; color: var(--ink);
@@ -676,6 +677,8 @@ document.getElementById("auto-generate-btn").addEventListener("click", async () 
   const name = document.getElementById("autoName").value.trim();
   const status = document.getElementById("auto-status");
   const btn = document.getElementById("auto-generate-btn");
+  status.classList.remove("status-error");
+  status.className = "hint";
   if (!name) {
     status.style.display = "block";
     status.textContent = "El nombre del prospecto es requerido.";
@@ -711,7 +714,10 @@ document.getElementById("auto-generate-btn").addEventListener("click", async () 
     status.textContent = "";
     status.style.display = "none";
   } catch (err) {
+    status.className = "status-error";
+    status.style.display = "block";
     status.textContent = "⚠️ " + err.message + " — si abriste este archivo directo (file://), la generación automática necesita el servidor local: corre `python3 server.py` en esta carpeta y abre http://localhost:8787";
+    status.scrollIntoView({ behavior: "smooth", block: "center" });
   } finally {
     btn.disabled = false;
     btn.textContent = "Generate Snapshot →";

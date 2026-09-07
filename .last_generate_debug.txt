@@ -5,7 +5,7 @@ RETURNCODE: 0
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Digital Presence Snapshot — Rustic Metal Signs</title>
+<title>Digital Presence Snapshot — Sanchez Masonry</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
@@ -110,8 +110,8 @@ RETURNCODE: 0
   .hero .lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 56ch; margin-top: 1rem; }
 
   .grade-strip { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; margin-top: 2.6rem; padding: 1.8rem; background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
-  .grade-big { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 110px; height: 110px; border-radius: 18px; background: var(--orange-soft); flex-shrink: 0; }
-  .grade-big .letter { font-family: var(--display); font-weight: 900; font-size: 3rem; line-height: 1; color: var(--orange-ink); }
+  .grade-big { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 110px; height: 110px; border-radius: 18px; background: var(--amber-soft); flex-shrink: 0; }
+  .grade-big .letter { font-family: var(--display); font-weight: 900; font-size: 3rem; line-height: 1; color: var(--amber); }
   .grade-big .caption { font-family: var(--mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mute); margin-top: 2px; }
   .grade-summary h2 { font-size: 1.25rem; }
   .grade-summary p { margin-top: .5rem; color: var(--ink-soft); font-size: .95rem; max-width: 54ch; }
@@ -206,7 +206,7 @@ RETURNCODE: 0
       <div>
         <img class="brand-logo" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
       </div>
-      <div class="report-tag">DIGITAL PRESENCE SNAPSHOT<br><strong>Prepared for Rustic Metal Signs</strong> · August 27, 2026</div>
+      <div class="report-tag">DIGITAL PRESENCE SNAPSHOT<br><strong>Prepared for Sanchez Masonry</strong> · September 6, 2026</div>
     </div>
   </div>
 </header>
@@ -217,8 +217,8 @@ RETURNCODE: 0
       <div class="hero-top">
         <div class="hero-copy-col">
           <p class="hero-eyebrow">Free Snapshot Report</p>
-          <h1>Real craftsmanship. Scattered footprint.</h1>
-          <p class="lede">Note on sourcing: the website link supplied for this audit (durhamlawsociety.co.uk) turned out to belong to an unrelated UK university law society, not this business — this snapshot instead audits the actual site we located at rusticmetalsigns.com, plus the Facebook, Instagram, and directory listings provided for the Waco, TX metal-sign shop. We looked at what a customer searching "custom metal signs Waco" would actually find tonight, on their phone.</p>
+          <h1>Five-star reviews. A trail that doesn't hold together.</h1>
+          <p class="lede">This snapshot audits exactly what a homeowner searching "Sanchez Masonry San Antonio" tonight would find — the website, the Google Business Profile, and every social and directory listing — the same way a prospect vets a mason before they ever pick up the phone.</p>
         </div>
         <svg class="hero-illo" viewBox="0 0 100 100" aria-hidden="true">
           <rect x="18" y="8" width="47" height="80" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="2"/>
@@ -237,13 +237,13 @@ RETURNCODE: 0
           <span class="caption">Overall</span>
         </div>
         <div class="grade-summary">
-          <h2>A working ecommerce shop that Google can't quite find</h2>
-          <p>Rustic Metal Signs has a genuinely active Instagram (604 followers, bilingual outreach) and a real online store with cart and checkout — the raw ingredients of a strong local business are there. But the profile that matters most for local search, Google Business, doesn't surface with reviews in the searches that should return it first, and the address on file splits between "Waco" (used everywhere in marketing) and "Lacy-Lakeview" (used in directories) — a mismatch that costs map-pack ranking before a customer ever sees the craftsmanship.</p>
+          <h2>30+ genuine five-star Google reviews back the work — but the rest of the internet doesn't echo them.</h2>
+          <p>Sanchez Masonry has earned real, specific praise from customers ("Jose and his son" showing up on time, doing clean work) and 30+ good reviews on Google. But a conflicting phone number on its own website, a Yelp listing filed under "Fences &amp; Gates," and an Instagram account dormant since February 2025 mean that reputation is far harder for a new prospect to find and trust than it should be.</p>
           <div class="pillar-scores">
-            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Website</span><span class="val">B-</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Google Profile</span><span class="val">D</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Social</span><span class="val">B-</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Listings</span><span class="val">D</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Website</span><span class="val">C</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Google Profile</span><span class="val">B</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Social</span><span class="val">D</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Listings</span><span class="val">C</span></div>
           </div>
         </div>
       </div>
@@ -270,23 +270,24 @@ RETURNCODE: 0
           </svg>
           <div>
             <p class="kicker">Pillar 01 — Website</p>
-            <h2>rusticmetalsigns.com sells real products — but tells no story</h2>
+            <h2>masonrysanchez.com looks current, but its own contact info doesn't agree with itself.</h2>
           </div>
         </div>
-        <span class="section-grade warn">Grade B-</span>
+        <span class="section-grade warn">Grade C</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Real ecommerce, not just a phone number</h4></div>
-          <p>The site runs individual product pages (a Waco logo sign, custom signage, grills, decor) with a shopping cart and prices in the $5–$85 range, letting a customer buy without ever picking up the phone. That's a genuine lead/sale-capture mechanism most local fabricators skip in favor of "call us."</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Two different phone numbers, one website</h4></div>
+          <p>The site displays 210-609-8858 in one place and 210-328-7738 in another — and HomeAdvisor has only the second number on file. A homeowner ready to book who dials the "wrong" one first adds friction at the exact moment they were about to call, and mismatched phone numbers across the web can also work against local search ranking.</p>
+          <div class="evidence">Numbers found on masonrysanchez.com: 210-609-8858 and 210-328-7738</div>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No trust-building content surfaced anywhere</h4></div>
-          <p>Every page we could locate through the site and search results is product-focused — no visible about/story section, no owner background, no customer testimonials. Shoppers comparing rustic-sign makers (Rustic Metalz, Rusty Rooster Metal, R&D Metal Works all show up in the same searches) have nothing on-site to tell them why to pick this shop over the next tab.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No verifiable credentials on the site that earned them</h4></div>
+          <p>The About page speaks only in general terms ("For years, Sanchez Masonry Work has been delivering stonework that lasts") with no license status, insurance statement, or specific years-in-business figure a homeowner could check. That's a real gap given the business already has 30+ five-star reviews sitting on Google that the website never mentions.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No reviews or social proof linked from the store</h4></div>
-          <p>Nothing on the storefront points to the Facebook or Instagram activity, or to any third-party reviews — the 604-follower Instagram and 572-like Facebook page exist as islands, disconnected from the page where a customer actually decides to buy.</p>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>A real contact form, not just a phone number</h4></div>
+          <p>Unlike many contractor sites that rely on "call us" alone, masonrysanchez.com has an actual Contact Us form alongside phone and email — a genuine first step for capturing leads who aren't ready to pick up the phone yet.</p>
         </div>
       </div>
     </div>
@@ -311,23 +312,23 @@ RETURNCODE: 0
           </svg>
           <div>
             <p class="kicker">Pillar 02 — Google Business Profile</p>
-            <h2>The profile that should win "custom metal signs Waco" isn't showing up</h2>
+            <h2>30+ five-star Google reviews are Sanchez Masonry's strongest asset — and the least visible one anywhere else.</h2>
           </div>
         </div>
-        <span class="section-grade critical">Grade D</span>
+        <span class="section-grade pass">Grade B</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>No Google Maps listing with reviews surfaced in search</h4></div>
-          <p>Searching directly for the business's Google Business Profile returns Yelp, Yahoo Local, and Facebook — but no Google Maps listing showing a star rating or review count appears in the results. For a local fabrication shop, that map-pack spot is usually the first thing a nearby customer sees; right now a competitor is winning it by default.</p>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>A genuinely strong, specific review base</h4></div>
+          <p>Sanchez Masonry has built up 30+ positive Google reviews, with customers repeatedly naming "Jose and his son" by name and praising punctuality and clean job sites — the kind of specific, repeatable praise that's hard to fake and worth leading with everywhere, not just on Google.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Zero visible reviews means zero visible social proof</h4></div>
-          <p>No public review count or rating could be found for this business, while a nearby competitor in the same search results (JDH Iron Designs) shows 12 Yelp reviews. A shopper comparing options before calling sees proof for one shop and nothing for the other.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>That reputation stays trapped on Google</h4></div>
+          <p>None of the review volume or the specific customer praise is echoed on the website, Facebook, or Instagram. A prospect who lands on any of those channels first — instead of the Google listing — sees none of the proof that would close the sale.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>The phone number itself is solid and consistent</h4></div>
-          <p>254-301-5356 appears identically on Instagram and on the Yahoo Local aggregator — a clean, unambiguous number to anchor a claimed and optimized profile around once it's built out.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No link from the website back to the listing</h4></div>
+          <p>masonrysanchez.com doesn't link directly to the Google Business Profile driving all that trust — a missed, free way to funnel website visitors straight to the review count that actually convinces them.</p>
         </div>
       </div>
     </div>
@@ -354,29 +355,29 @@ RETURNCODE: 0
           </svg>
           <div>
             <p class="kicker">Pillar 03 — Social &amp; Listings</p>
-            <h2>Social is genuinely active; the directory data underneath it isn't</h2>
+            <h2>Instagram and Facebook exist, but the last real post was 19 months ago.</h2>
           </div>
         </div>
-        <span class="section-grade warn">Grade B- / D</span>
+        <span class="section-grade critical">Grade D / C</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Instagram is a real, working channel</h4></div>
-          <p>604 followers, 218 following, and recent posts spanning grills, benches, signage, and belt buckles, with bilingual outreach ("Hablamos Español") in the bio. This is an active account a real customer would trust, not a dormant placeholder.</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Instagram has been silent since February 2025</h4></div>
+          <p>@sanchezmasonrry's most recent post is from February 3, 2025 — over 19 months of silence, with just 30 followers, despite steady project work happening in that time based on the ongoing flow of Google reviews. A dormant feed reads as "not currently working" to anyone who checks before hiring.</p>
+          <div class="evidence">@sanchezmasonrry — 30 followers, 21 following, last post: Feb 3, 2025</div>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Facebook is active too</h4></div>
-          <p>572 likes with photos posted, giving the business two consistent, real social channels — the foundation most local shops never bother to build.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Facebook activity couldn't be confirmed</h4></div>
+          <p>A Facebook page named "Sanchez Masonry" exists, but its posting activity and follower count couldn't be verified from the outside. For a trade that sells on visual proof of finished work — patios, stone walls, flower beds — an unclear or inactive Facebook presence is a free showcase going unused.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Yelp lists the shop as open 24 hours, every day</h4></div>
-          <p>The Yelp listing shows "Open 24 Hours" for all seven days of the week — implausible for a metal-fabrication shop and a strong signal the listing was never claimed or corrected. A customer checking hours before a drive-out gets no usable information.</p>
-          <div class="evidence">Yelp listing hours: "Open 24 Hours" — Thursday through Wednesday, all 7 days</div>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Yelp files them under the wrong category</h4></div>
+          <p>The Yelp listing for Sanchez Masonry Work is categorized under "Fences &amp; Gates" rather than masonry or stonework. A homeowner searching Yelp specifically for a mason in San Antonio is unlikely to ever surface this listing at all.</p>
+          <div class="evidence">"SANCHEZ MASONRY WORK … Fences &amp; Gates — Phone Number — Yelp"</div>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>The city name doesn't agree across listings</h4></div>
-          <p>Yahoo Local lists the address as "1261 Coxs Oak Valley Dr, Waco, TX 76705," while Yelp lists the identical street address as "Lacy-Lakeview, Texas" — and the brand itself markets as "Waco, TX" on Instagram and Facebook. Google and other search engines weigh exact address consistency heavily; a name that can't agree with itself on city loses ranking ground to competitors whose listings match cleanly.</p>
-          <div class="evidence">Yahoo Local: "1261 Coxs Oak Valley Dr Waco, TX 76705" — Yelp: "1261 Coxs Oak Valley Dr, Lacy-Lakeview, Texas"</div>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Real footprint across the major directories</h4></div>
+          <p>Sanchez Masonry Work shows up consistently on Angi, HomeAdvisor, and Nextdoor with matching services and a 5.0-equivalent rating on Angi. The foundation is there — the fix needed is precision (categories, activity), not building visibility from scratch.</p>
         </div>
       </div>
     </div>
@@ -395,41 +396,41 @@ RETURNCODE: 0
         <div class="win">
           <span class="win-num">01</span>
           <div>
-            <h4>Claim and fully build out the Google Business Profile</h4>
-            <p>Right now the profile doesn't surface with reviews in searches that should return it first. Claiming it, adding photos, and setting the city consistently to Waco is free and is usually the single highest-leverage fix available.</p>
+            <h4>Pick one phone number and make it match everywhere</h4>
+            <p>Two different numbers are live on the website right now. Settle on the one HomeAdvisor already has (210-328-7738) and update every page, listing, and profile to match it.</p>
             <span class="impact">Highest impact · Free</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">02</span>
           <div>
-            <h4>Correct the "Open 24 Hours" Yelp listing</h4>
-            <p>An implausible, unmanaged-looking hours field undercuts credibility the moment a prospect checks it. Claiming the Yelp listing and entering real hours takes minutes and removes an obvious red flag.</p>
-            <span class="impact">Reputation risk</span>
+            <h4>Post to Instagram and Facebook again</h4>
+            <p>Even a monthly project photo would end 19 months of silence and let the customers behind those 30+ five-star reviews actually see recent work happening.</p>
+            <span class="impact">Free</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">03</span>
           <div>
-            <h4>Standardize the city name across every directory</h4>
-            <p>Pick one city — Waco, to match the brand's own marketing — and update Yelp, Yahoo Local, and any other directory currently showing Lacy-Lakeview. Consistent NAP data is a foundational local-SEO signal, not a cosmetic detail.</p>
+            <h4>Recategorize the Yelp listing</h4>
+            <p>Move Sanchez Masonry Work out of "Fences &amp; Gates" and into Masonry/Stonework so homeowners searching Yelp for a mason can actually find this listing.</p>
             <span class="impact">SEO foundation</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">04</span>
           <div>
-            <h4>Add a real story and testimonials to rusticmetalsigns.com</h4>
-            <p>The store sells well but says nothing about who's behind it. A short about section plus a few customer quotes pulled from the active Instagram/Facebook following would give shoppers a reason to choose this shop over the several other Waco-area sign makers competing for the same searches.</p>
-            <span class="impact">Lead capture</span>
+            <h4>Put the Google reviews on the website</h4>
+            <p>Add a handful of the specific, named 5-star reviews already sitting on Google — plus a real years-in-business figure — to the site itself, so the proof isn't locked inside one platform.</p>
+            <span class="impact">Reputation risk</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">05</span>
           <div>
-            <h4>Actively collect reviews from the existing customer base</h4>
-            <p>With 604 Instagram followers and 572 Facebook likes already engaged, a simple ask-for-a-review campaign could build the review count that's currently missing from Google and Yelp alike — turning an already-active audience into visible social proof.</p>
-            <span class="impact">Reputation build</span>
+            <h4>Turn the contact form into a short qualifier</h4>
+            <p>Replace the generic contact form with a brief multi-step version — project type, timeline, rough budget — so leads self-qualify before Jose returns the call.</p>
+            <span class="impact">Lead capture</span>
           </div>
         </div>
       </div>
@@ -447,7 +448,7 @@ RETURNCODE: 0
 
   <footer class="report-footer">
     <div class="container" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:.5rem;">
-      <span>Findings based on publicly available data as of August 27, 2026. Not a substitute for a full technical audit.</span>
+      <span>Findings based on publicly available data as of September 6, 2026. Not a substitute for a full technical audit.</span>
       <span>EdgeBeyond Solutions</span>
     </div>
   </footer>
