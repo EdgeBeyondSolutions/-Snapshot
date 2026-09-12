@@ -2,10 +2,10 @@ RETURNCODE: 0
 
 --- STDOUT ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 <head>
 <meta charset="utf-8">
-<title>Digital Presence Snapshot — Sanchez Masonry</title>
+<title>Digital Presence Snapshot — Pastelería La Fête de México</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
@@ -110,8 +110,8 @@ RETURNCODE: 0
   .hero .lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 56ch; margin-top: 1rem; }
 
   .grade-strip { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; margin-top: 2.6rem; padding: 1.8rem; background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
-  .grade-big { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 110px; height: 110px; border-radius: 18px; background: var(--amber-soft); flex-shrink: 0; }
-  .grade-big .letter { font-family: var(--display); font-weight: 900; font-size: 3rem; line-height: 1; color: var(--amber); }
+  .grade-big { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 110px; height: 110px; border-radius: 18px; background: var(--orange-soft); flex-shrink: 0; }
+  .grade-big .letter { font-family: var(--display); font-weight: 900; font-size: 3rem; line-height: 1; color: var(--orange-ink); }
   .grade-big .caption { font-family: var(--mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mute); margin-top: 2px; }
   .grade-summary h2 { font-size: 1.25rem; }
   .grade-summary p { margin-top: .5rem; color: var(--ink-soft); font-size: .95rem; max-width: 54ch; }
@@ -206,7 +206,7 @@ RETURNCODE: 0
       <div>
         <img class="brand-logo" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
       </div>
-      <div class="report-tag">DIGITAL PRESENCE SNAPSHOT<br><strong>Prepared for Sanchez Masonry</strong> · September 6, 2026</div>
+      <div class="report-tag">DIGITAL PRESENCE SNAPSHOT<br><strong>Preparado para Pastelería La Fête de México</strong> · 11 de septiembre de 2026</div>
     </div>
   </div>
 </header>
@@ -216,9 +216,9 @@ RETURNCODE: 0
     <div class="container">
       <div class="hero-top">
         <div class="hero-copy-col">
-          <p class="hero-eyebrow">Free Snapshot Report</p>
-          <h1>Five-star reviews. A trail that doesn't hold together.</h1>
-          <p class="lede">This snapshot audits exactly what a homeowner searching "Sanchez Masonry San Antonio" tonight would find — the website, the Google Business Profile, and every social and directory listing — the same way a prospect vets a mason before they ever pick up the phone.</p>
+          <p class="hero-eyebrow">Reporte Gratuito de Presencia Digital</p>
+          <h1>Tu comunidad te sigue. Google no sabe que existes.</h1>
+          <p class="lede">Revisamos exactamente lo que un cliente nuevo encontraría hoy, desde su celular, buscando "pastelería de pasteles personalizados" en tu zona: tu sitio web (si existe), tu Perfil de Negocio de Google y tu presencia en redes y directorios.</p>
         </div>
         <svg class="hero-illo" viewBox="0 0 100 100" aria-hidden="true">
           <rect x="18" y="8" width="47" height="80" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)" stroke-width="2"/>
@@ -233,24 +233,24 @@ RETURNCODE: 0
 
       <div class="grade-strip">
         <div class="grade-big">
-          <span class="letter">C-</span>
-          <span class="caption">Overall</span>
+          <span class="letter">D</span>
+          <span class="caption">General</span>
         </div>
         <div class="grade-summary">
-          <h2>30+ genuine five-star Google reviews back the work — but the rest of the internet doesn't echo them.</h2>
-          <p>Sanchez Masonry has earned real, specific praise from customers ("Jose and his son" showing up on time, doing clean work) and 30+ good reviews on Google. But a conflicting phone number on its own website, a Yelp listing filed under "Fences &amp; Gates," and an Instagram account dormant since February 2025 mean that reputation is far harder for a new prospect to find and trust than it should be.</p>
+          <h2>Un negocio con clientes reales, invisible en cada búsqueda de Google</h2>
+          <p>La Fête de México tiene una comunidad genuina — más de 4,400 "me gusta" en Facebook y una cuenta de Instagram activa con publicaciones recientes — pero ese trabajo de años no existe para Google: sin sitio web y sin Perfil de Negocio, cualquier búsqueda de "pastelería cerca de mí" en tu zona termina en la competencia.</p>
           <div class="pillar-scores">
-            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Website</span><span class="val">C</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--green)"></span><span class="label">Google Profile</span><span class="val">B</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Social</span><span class="val">D</span></div>
-            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Listings</span><span class="val">C</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Sitio Web</span><span class="val">F</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Perfil de Google</span><span class="val">F</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--amber)"></span><span class="label">Redes Sociales</span><span class="val">C</span></div>
+            <div class="pillar-score"><span class="dot" style="background:var(--orange)"></span><span class="label">Directorios</span><span class="val">F</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PILLAR 01 — WEBSITE -->
+  <!-- PILLAR 01 — WEBSITE (no-website variant) -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -269,25 +269,24 @@ RETURNCODE: 0
             <circle cx="78" cy="70.5" r="2.6" fill="#fff"/>
           </svg>
           <div>
-            <p class="kicker">Pillar 01 — Website</p>
-            <h2>masonrysanchez.com looks current, but its own contact info doesn't agree with itself.</h2>
+            <p class="kicker">Pilar 01 — Sitio Web</p>
+            <h2>No existe un sitio web para La Fête de México — solo redes sociales</h2>
           </div>
         </div>
-        <span class="section-grade warn">Grade C</span>
+        <span class="section-grade critical">Calificación F</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Two different phone numbers, one website</h4></div>
-          <p>The site displays 210-609-8858 in one place and 210-328-7738 in another — and HomeAdvisor has only the second number on file. A homeowner ready to book who dials the "wrong" one first adds friction at the exact moment they were about to call, and mismatched phone numbers across the web can also work against local search ranking.</p>
-          <div class="evidence">Numbers found on masonrysanchez.com: 210-609-8858 and 210-328-7738</div>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>No hay sitio web que un cliente pueda encontrar</h4></div>
+          <p>Buscamos "La Fête de México pastelería" y variantes directamente en Google y no aparece ningún sitio propio — solo el perfil de Facebook y de Instagram. Cualquiera que busque "pastelería de pasteles personalizados cerca de mí" no tiene forma de llegar a ustedes desde Google, porque no hay nada que Google pueda indexar como tu negocio.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No verifiable credentials on the site that earned them</h4></div>
-          <p>The About page speaks only in general terms ("For years, Sanchez Masonry Work has been delivering stonework that lasts") with no license status, insurance statement, or specific years-in-business figure a homeowner could check. That's a real gap given the business already has 30+ five-star reviews sitting on Google that the website never mentions.</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Todo pedido depende de escribir primero por Instagram</h4></div>
+          <p>No hay catálogo con precios, formulario de cotización ni forma de dejar tus datos sin abrir Instagram o Facebook y mandar un mensaje directo. Esto cierra la puerta a clientes que prefieren cotizar por escrito o que no usan esas dos apps.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>A real contact form, not just a phone number</h4></div>
-          <p>Unlike many contractor sites that rely on "call us" alone, masonrysanchez.com has an actual Contact Us form alongside phone and email — a genuine first step for capturing leads who aren't ready to pick up the phone yet.</p>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>El feed de Instagram sí funciona como catálogo visual</h4></div>
+          <p>Aunque no sustituye un sitio propio, los highlights de pasteles de fondant, postres tradicionales y bocadillos de repostería sí dan a un cliente nuevo algo concreto que revisar antes de escribir — es la única prueba social organizada que existe hoy.</p>
         </div>
       </div>
     </div>
@@ -311,24 +310,24 @@ RETURNCODE: 0
             </g>
           </svg>
           <div>
-            <p class="kicker">Pillar 02 — Google Business Profile</p>
-            <h2>30+ five-star Google reviews are Sanchez Masonry's strongest asset — and the least visible one anywhere else.</h2>
+            <p class="kicker">Pilar 02 — Perfil de Negocio de Google</p>
+            <h2>La Fête de México no aparece en Google Maps ni en Búsqueda de Google</h2>
           </div>
         </div>
-        <span class="section-grade pass">Grade B</span>
+        <span class="section-grade critical">Calificación F</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>A genuinely strong, specific review base</h4></div>
-          <p>Sanchez Masonry has built up 30+ positive Google reviews, with customers repeatedly naming "Jose and his son" by name and praising punctuality and clean job sites — the kind of specific, repeatable praise that's hard to fake and worth leading with everywhere, not just on Google.</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Sin ficha de Google Business visible, reclamada o no</h4></div>
+          <p>Buscamos "La Fête de México pastelería", "pastelería Estado de México reseñas" y variantes directamente en Google y no encontramos ninguna ficha de Google Maps para el negocio. En el mapa de resultados que Google muestra para "pastelería cerca de mí" — donde la mayoría de la gente busca antes de comprar un pastel — el negocio simplemente no aparece.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>That reputation stays trapped on Google</h4></div>
-          <p>None of the review volume or the specific customer praise is echoed on the website, Facebook, or Instagram. A prospect who lands on any of those channels first — instead of the Google listing — sees none of the proof that would close the sale.</p>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Cero reseñas en el lugar donde más pesan al comparar</h4></div>
+          <p>Más de 4,400 seguidores en Facebook son evidencia de clientes satisfechos — pero ninguna de esa buena reputación se traduce en estrellas de Google, que es lo primero que compara un cliente nuevo entre dos pastelerías antes de decidir.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>No link from the website back to the listing</h4></div>
-          <p>masonrysanchez.com doesn't link directly to the Google Business Profile driving all that trust — a missed, free way to funnel website visitors straight to the review count that actually convinces them.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Reclamar la ficha es gratis y toma menos de una hora</h4></div>
+          <p>Hoy, cualquier competidor con una ficha de Google reclamada aparece antes que ustedes en el mapa sin importar la calidad del producto — es una desventaja que se puede corregir sin gastar nada.</p>
         </div>
       </div>
     </div>
@@ -354,30 +353,28 @@ RETURNCODE: 0
             <rect x="28" y="75" width="14" height="3" rx="1.5" fill="#fff" opacity=".6"/>
           </svg>
           <div>
-            <p class="kicker">Pillar 03 — Social &amp; Listings</p>
-            <h2>Instagram and Facebook exist, but the last real post was 19 months ago.</h2>
+            <p class="kicker">Pilar 03 — Redes Sociales y Directorios</p>
+            <h2>Facebook e Instagram sí están activos — pero no hay puente hacia una venta</h2>
           </div>
         </div>
-        <span class="section-grade critical">Grade D / C</span>
+        <span class="section-grade critical">Calificación C / F</span>
       </div>
       <div class="finding-grid">
         <div class="finding">
-          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Instagram has been silent since February 2025</h4></div>
-          <p>@sanchezmasonrry's most recent post is from February 3, 2025 — over 19 months of silence, with just 30 followers, despite steady project work happening in that time based on the ongoing flow of Google reviews. A dormant feed reads as "not currently working" to anyone who checks before hiring.</p>
-          <div class="evidence">@sanchezmasonrry — 30 followers, 21 following, last post: Feb 3, 2025</div>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Instagram activo, no abandonado</h4></div>
+          <p>Con 1,535 seguidores y publicaciones recientes (mayo a agosto de 2026) mostrando pasteles de fondant, chocolate y postres en gelatina, la cuenta @lafetedemexico está genuinamente viva — eso ya es más de lo que tienen muchos negocios similares.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Facebook activity couldn't be confirmed</h4></div>
-          <p>A Facebook page named "Sanchez Masonry" exists, but its posting activity and follower count couldn't be verified from the outside. For a trade that sells on visual proof of finished work — patios, stone walls, flower beds — an unclear or inactive Facebook presence is a free showcase going unused.</p>
+          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>El enlace del bio no lleva a ningún destino propio</h4></div>
+          <p>El enlace en la biografía de Instagram apunta a Threads (@lafetedemexico), no a un catálogo, sitio o formulario de cotización — cada visita desde Instagram termina en otra red social, nunca en una acción que capture el contacto del cliente.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span><h4>Yelp files them under the wrong category</h4></div>
-          <p>The Yelp listing for Sanchez Masonry Work is categorized under "Fences &amp; Gates" rather than masonry or stonework. A homeowner searching Yelp specifically for a mason in San Antonio is unlikely to ever surface this listing at all.</p>
-          <div class="evidence">"SANCHEZ MASONRY WORK … Fences &amp; Gates — Phone Number — Yelp"</div>
+          <div class="finding-head"><span class="status-chip critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h4>Ningún directorio confirma dirección o teléfono</h4></div>
+          <p>No encontramos ninguna ficha en directorios de negocios con dirección o teléfono verificable para La Fête de México — sin esa consistencia, ni Google ni un cliente nuevo pueden confirmar dónde recoger un pedido o a qué número llamar directamente.</p>
         </div>
         <div class="finding">
-          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Real footprint across the major directories</h4></div>
-          <p>Sanchez Masonry Work shows up consistently on Angi, HomeAdvisor, and Nextdoor with matching services and a 5.0-equivalent rating on Angi. The foundation is there — the fix needed is precision (categories, activity), not building visibility from scratch.</p>
+          <div class="finding-head"><span class="status-chip pass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><h4>Facebook tiene una comunidad ya construida</h4></div>
+          <p>La página "Pasteleria La Fete de México" acumula más de 4,400 "me gusta", una base de clientes construida con años de trabajo — el reto no es la falta de público, es que ese público no tiene forma de encontrarlos si todavía no los sigue.</p>
         </div>
       </div>
     </div>
@@ -388,49 +385,49 @@ RETURNCODE: 0
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="kicker">The Fix — In Order</p>
-          <h2>Five moves, ranked by how much they cost to ignore</h2>
+          <p class="kicker">La Solución — En Orden</p>
+          <h2>Cinco movimientos, ordenados por lo que cuesta ignorarlos</h2>
         </div>
       </div>
       <div class="wins-list">
         <div class="win">
           <span class="win-num">01</span>
           <div>
-            <h4>Pick one phone number and make it match everywhere</h4>
-            <p>Two different numbers are live on the website right now. Settle on the one HomeAdvisor already has (210-328-7738) and update every page, listing, and profile to match it.</p>
-            <span class="impact">Highest impact · Free</span>
+            <h4>Reclamar y verificar el Perfil de Negocio de Google</h4>
+            <p>Es gratis, toma menos de una hora, y es la diferencia entre existir o no en el mapa de "pastelería cerca de mí". Cada día sin esta ficha es un cliente que compra con la competencia porque fue la única opción que Google le mostró.</p>
+            <span class="impact">Máximo impacto · Gratis</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">02</span>
           <div>
-            <h4>Post to Instagram and Facebook again</h4>
-            <p>Even a monthly project photo would end 19 months of silence and let the customers behind those 30+ five-star reviews actually see recent work happening.</p>
-            <span class="impact">Free</span>
+            <h4>Pedir reseñas de Google a los clientes que ya existen</h4>
+            <p>Con más de 4,400 "me gusta" en Facebook ya hay una base de clientes satisfechos; pedirles 10-15 reseñas en Google en las primeras semanas después de crear la ficha construye la prueba social donde de verdad se compara.</p>
+            <span class="impact">Riesgo de reputación</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">03</span>
           <div>
-            <h4>Recategorize the Yelp listing</h4>
-            <p>Move Sanchez Masonry Work out of "Fences &amp; Gates" and into Masonry/Stonework so homeowners searching Yelp for a mason can actually find this listing.</p>
-            <span class="impact">SEO foundation</span>
+            <h4>Centralizar el bio de Instagram y Facebook en un solo destino real</h4>
+            <p>Hoy el enlace de Instagram lleva a Threads, no a una forma de comprar; centralizar el bio en un solo punto de contacto (WhatsApp Business, catálogo o sitio) hace que cada visita desde redes tenga una acción clara que tomar.</p>
+            <span class="impact">Base de SEO</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">04</span>
           <div>
-            <h4>Put the Google reviews on the website</h4>
-            <p>Add a handful of the specific, named 5-star reviews already sitting on Google — plus a real years-in-business figure — to the site itself, so the proof isn't locked inside one platform.</p>
-            <span class="impact">Reputation risk</span>
+            <h4>Publicar un catálogo digital con precios y formulario de cotización</h4>
+            <p>No necesita ser un sitio completo — una landing simple con fotos, precios base y un formulario que capture nombre y teléfono ya sería más de lo que existe hoy, y deja de depender por completo de que alguien escriba primero por Instagram.</p>
+            <span class="impact">Captura de clientes</span>
           </div>
         </div>
         <div class="win">
           <span class="win-num">05</span>
           <div>
-            <h4>Turn the contact form into a short qualifier</h4>
-            <p>Replace the generic contact form with a brief multi-step version — project type, timeline, rough budget — so leads self-qualify before Jose returns the call.</p>
-            <span class="impact">Lead capture</span>
+            <h4>Construir un sitio web básico con dirección, teléfono y catálogo</h4>
+            <p>Un sitio de una sola página con datos de contacto consistentes, catálogo visual y botón de cotización resuelve de raíz el problema de fondo: hoy no hay ningún lugar propio en internet donde este negocio controle lo que un cliente nuevo ve primero.</p>
+            <span class="impact">Reconstrucción completa</span>
           </div>
         </div>
       </div>
@@ -438,9 +435,9 @@ RETURNCODE: 0
       <div class="cta">
         <div class="cta-inner">
           <img class="brand-logo brand-logo-cta" src="{{LOGO_DATA_URI_PLACEHOLDER}}" alt="EdgeBeyond Solutions" />
-          <h2>We fix all five. Usually starting with the free one.</h2>
-          <p>This snapshot took us under a day using only what's publicly visible. A working session with your team takes about 30 minutes and leaves you with a prioritized plan — no obligation either way.</p>
-          <a class="btn" href="https://calendar.app.google/1GFwXDncbppQ1RHn6" target="_blank" rel="noopener">Book the 30-Minute Walkthrough</a>
+          <h2>Resolvemos los cinco. Casi siempre empezando por el gratuito.</h2>
+          <p>Este snapshot lo hicimos en menos de un día usando solo lo que ya es público. Una sesión de trabajo con tu equipo toma unos 30 minutos y te deja con un plan priorizado — sin ningún compromiso de por medio.</p>
+          <a class="btn" href="https://calendar.app.google/1GFwXDncbppQ1RHn6" target="_blank" rel="noopener">Agenda tu Sesión Gratuita de 30 Minutos</a>
         </div>
       </div>
     </div>
@@ -448,7 +445,7 @@ RETURNCODE: 0
 
   <footer class="report-footer">
     <div class="container" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:.5rem;">
-      <span>Findings based on publicly available data as of September 6, 2026. Not a substitute for a full technical audit.</span>
+      <span>Hallazgos basados en información disponible públicamente al 11 de septiembre de 2026. No sustituye una auditoría técnica completa.</span>
       <span>EdgeBeyond Solutions</span>
     </div>
   </footer>
