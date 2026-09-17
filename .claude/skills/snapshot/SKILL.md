@@ -122,10 +122,14 @@ Two guardrails, added after a copy review flagged both:
   (e.g. "Highest impact · Free", "Reputation risk", "SEO foundation", "Lead capture", "Full
   rebuild").
 - **CTA**: keep EdgeBeyond Solutions branding fixed. The button links to the real Google
-  Calendar booking page — `https://calendar.app.google/1GFwXDncbppQ1RHn6`, `target="_blank"
+  Calendar booking page — `https://calendar.app.google/11WtesnFPFsi62aZ6`, `target="_blank"
   rel="noopener"` — not a `mailto:` link. This is intentional: a real scheduling link is
   actual lead capture (name/email/time collected by Google), where a mailto is not. The
-  same fixed URL is used for every prospect — nothing to customize per report.
+  same fixed URL is used for every prospect — nothing to customize per report. If this
+  booking page ever shows "Appointment not found," it means its availability window
+  expired in Google Calendar (it was set for specific dates, not recurring) — that's fixed
+  in Google Calendar itself (make the schedule recurring / extend its dates), not in this
+  codebase; only update this URL if the user gives you a genuinely new link.
 
 ## Step 4 — Hand off the content
 
