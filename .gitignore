@@ -1,0 +1,5 @@
+.server.log
+.last_generate_debug.txt
+__pycache__/
+*.pyc
+reports/
