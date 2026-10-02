@@ -114,6 +114,9 @@
       <div><label for="autoFacebook">Facebook</label><input type="text" id="autoFacebook" placeholder="facebook.com/..."></div>
       <div><label for="autoInstagram">Instagram</label><input type="text" id="autoInstagram" placeholder="instagram.com/..."></div>
     </div>
+    <label for="autoVerified">Datos verificados manualmente (opcional)</label>
+    <textarea id="autoVerified" placeholder="Ej: Google Maps — ficha sin reclamar, 139 reseñas, 4.2★. Facebook — 2,700 seguidores, 11 opiniones. Teléfono con WhatsApp: 414 112 4584."></textarea>
+    <p class="hint">Si ya abriste tú mismo su Google Maps o Facebook, pega aquí lo que viste. Google/Facebook/Instagram bloquean el acceso automatizado, así que esto tiene prioridad sobre lo que el generador encuentre por su cuenta.</p>
     <div style="text-align:center; padding-top:16px;">
       <button type="button" id="auto-generate-btn" class="submit-btn">Generate Snapshot →</button>
     </div>
@@ -516,7 +519,6 @@ const REPORT_CSS = `
     .section { break-before: page; page-break-before: always; border-top: none; padding-top: 0; }
     .section:first-of-type { break-before: auto; page-break-before: auto; }
     .grade-strip, .finding, .win, .cta, .brand-row { break-inside: avoid; page-break-inside: avoid; }
-    .cta { break-before: page; page-break-before: always; break-inside: avoid; }
     .report-footer { break-before: auto; }
     a[href]::after { content: ""; }
   }
@@ -688,6 +690,7 @@ document.getElementById("auto-generate-btn").addEventListener("click", async () 
   const facebook = document.getElementById("autoFacebook").value.trim();
   const instagram = document.getElementById("autoInstagram").value.trim();
   const city = document.getElementById("autoCity").value.trim();
+  const verified = document.getElementById("autoVerified").value.trim();
   const lang = document.getElementById("autoLang").value;
 
   btn.disabled = true;
@@ -699,7 +702,7 @@ document.getElementById("auto-generate-btn").addEventListener("click", async () 
     const res = await fetch("/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, website, facebook, instagram, city, lang })
+      body: JSON.stringify({ name, website, facebook, instagram, city, verified, lang })
     });
     const data = await res.json();
     if (!res.ok) {
@@ -771,10 +774,36 @@ document.getElementById("download-html-btn").addEventListener("click", () => {
   URL.revokeObjectURL(url);
 });
 
-document.getElementById("download-pdf-btn").addEventListener("click", () => {
-  const frame = document.getElementById("report-frame");
-  frame.contentWindow.focus();
-  frame.contentWindow.print();
+document.getElementById("download-pdf-btn").addEventListener("click", async () => {
+  const btn = document.getElementById("download-pdf-btn");
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "Generando PDF…";
+  try {
+    const res = await fetch("/render-pdf", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ html: lastHtml })
+    });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.error || "No se pudo generar el PDF en el servidor.");
+    }
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${lastSlug}-snapshot.pdf`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  } catch (err) {
+    alert("⚠️ " + err.message + "\n\nEsto necesita el servidor local corriendo (Abrir Snapshot.command) — si abriste este archivo directo (file://), no va a funcionar.");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = original;
+  }
 });
 </script>
 </body>

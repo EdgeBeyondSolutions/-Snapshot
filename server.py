@@ -19,7 +19,20 @@ import json
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
+
+CHROME_PATHS = [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Chromium.app/Contents/MacOS/Chromium",
+]
+
+
+def find_chrome():
+    for path in CHROME_PATHS:
+        if Path(path).exists():
+            return path
+    return None
 
 PORT = 8787
 ROOT = Path(__file__).resolve().parent
@@ -27,6 +40,8 @@ SKILL_PROMPT_PATH = ROOT / ".claude" / "skills" / "snapshot" / "SKILL.md"
 CLAUDE_TIMEOUT_SECONDS = 600
 
 FENCE_RE = re.compile(r"^```(?:html)?\s*\n|\n```\s*$", re.MULTILINE)
+DOCTYPE_RE = re.compile(r"<!doctype\s+html", re.IGNORECASE)
+HTML_CLOSE_RE = re.compile(r"</html\s*>", re.IGNORECASE)
 
 
 def strip_fences(text: str) -> str:
@@ -35,15 +50,43 @@ def strip_fences(text: str) -> str:
     return text
 
 
+def extract_html_document(text: str) -> str:
+    """Keep only the <!DOCTYPE html>...</html> span, discarding any stray
+    commentary Claude left before or after it (e.g. "I have enough verified
+    research. Now producing the final report.") — a prompt instruction alone
+    isn't reliable enough to prevent this, so enforce it here too."""
+    text = strip_fences(text)
+    start_match = DOCTYPE_RE.search(text)
+    if not start_match:
+        return text
+    end_match = None
+    for end_match in HTML_CLOSE_RE.finditer(text):
+        pass  # take the last </html> in case of any trailing noise
+    end = end_match.end() if end_match else len(text)
+    return text[start_match.start():end].strip()
+
+
 LANGUAGE_NAMES = {"en": "English (US)", "es": "Spanish (Mexico — natural business Spanish, tú/informal but professional, as EdgeBeyond Solutions would write it for a Mexican prospect)"}
 
 
-def build_prompt(name: str, website: str, facebook: str, instagram: str, city: str, lang: str) -> str:
+def build_prompt(name: str, website: str, facebook: str, instagram: str, city: str, verified: str, lang: str) -> str:
     website_line = website or "none provided — search for one; if you can't confidently find one, treat this prospect as having no website"
     facebook_line = facebook or "not provided — search for one; if none found, treat as absent"
     instagram_line = instagram or "not provided — search for one; if none found, treat as absent"
     city_line = city or "not provided"
     language_name = LANGUAGE_NAMES.get(lang, LANGUAGE_NAMES["en"])
+    verified_block = ""
+    if verified:
+        verified_block = f"""
+
+VERIFIED GROUND TRUTH — a human already opened the real pages and confirmed these facts
+firsthand. Google Maps, Facebook, and Instagram block automated access, so your own
+WebFetch/WebSearch on those same pages is LESS reliable than this. These facts OVERRIDE
+anything your own research finds or fails to find — do not contradict them, do not imply
+uncertainty about them, and do not write a finding that says a profile/account is
+unclaimed/absent/ungraded if these facts say otherwise:
+{verified}
+"""
     return f"""Follow the playbook in .claude/skills/snapshot/SKILL.md in this directory exactly.
 
 Generate a "Digital Presence Snapshot" report for this prospect:
@@ -52,7 +95,7 @@ Generate a "Digital Presence Snapshot" report for this prospect:
 - Website: {website_line}
 - Facebook: {facebook_line}
 - Instagram: {instagram_line}
-
+{verified_block}
 This is a non-interactive, single-shot run — there is no human available to answer
 clarifying questions, so you must NEVER stop to ask one. If the business name is ambiguous
 (multiple unrelated businesses share it) and no city/region was given, use the strongest
@@ -94,6 +137,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         sys.stderr.write("[server] " + (fmt % args) + "\n")
 
     def do_POST(self):
+        if self.path == "/render-pdf":
+            self.handle_render_pdf()
+            return
         if self.path != "/generate":
             self.send_error(404)
             return
@@ -113,11 +159,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         facebook = (payload.get("facebook") or "").strip()
         instagram = (payload.get("instagram") or "").strip()
         city = (payload.get("city") or "").strip()
+        verified = (payload.get("verified") or "").strip()
         lang = (payload.get("lang") or "en").strip()
         if lang not in LANGUAGE_NAMES:
             lang = "en"
 
-        prompt = build_prompt(name, website, facebook, instagram, city, lang)
+        prompt = build_prompt(name, website, facebook, instagram, city, verified, lang)
 
         try:
             result = subprocess.run(
@@ -153,7 +200,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.send_json(500, {"error": f"Claude CLI falló: {detail}"})
             return
 
-        html = strip_fences(result.stdout)
+        html = extract_html_document(result.stdout)
         if "<!doctype html>" not in html.lower():
             self.send_json(500, {"error": "La respuesta no contenía un documento HTML válido.", "raw": html[:4000]})
             return
@@ -162,6 +209,55 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         html = html.replace("{{LOGO_DATA_URI_PLACEHOLDER}}", f"data:image/svg+xml;base64,{logo_b64}")
 
         self.send_json(200, {"html": html})
+
+    def handle_render_pdf(self):
+        """Render HTML to PDF with headless Chrome instead of the browser's
+        print dialog — avoids the date/URL/page-number header-footer that
+        Chrome's print dialog adds unless the user remembers to uncheck
+        "Headers and footers" (it was shipped to a client like that once)."""
+        length = int(self.headers.get("Content-Length", 0))
+        try:
+            payload = json.loads(self.rfile.read(length) or b"{}")
+        except json.JSONDecodeError:
+            self.send_json(400, {"error": "Invalid JSON body"})
+            return
+
+        html = payload.get("html") or ""
+        if "<!doctype html>" not in html.lower():
+            self.send_json(400, {"error": "No se recibió un documento HTML válido para convertir."})
+            return
+
+        chrome = find_chrome()
+        if not chrome:
+            self.send_json(500, {"error": "No se encontró Google Chrome en este Mac — necesario para generar el PDF sin encabezados."})
+            return
+
+        with tempfile.TemporaryDirectory() as tmp:
+            html_path = Path(tmp) / "report.html"
+            pdf_path = Path(tmp) / "report.pdf"
+            html_path.write_text(html, encoding="utf-8")
+            try:
+                result = subprocess.run(
+                    [
+                        chrome, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+                        f"--print-to-pdf={pdf_path}",
+                        html_path.as_uri(),
+                    ],
+                    capture_output=True, text=True, timeout=60,
+                )
+            except subprocess.TimeoutExpired:
+                self.send_json(500, {"error": "Chrome tardó demasiado generando el PDF."})
+                return
+            if result.returncode != 0 or not pdf_path.exists():
+                self.send_json(500, {"error": f"Chrome falló generando el PDF: {result.stderr[-1000:]}"})
+                return
+            pdf_bytes = pdf_path.read_bytes()
+
+        self.send_response(200)
+        self.send_header("Content-Type", "application/pdf")
+        self.send_header("Content-Length", str(len(pdf_bytes)))
+        self.end_headers()
+        self.wfile.write(pdf_bytes)
 
     def send_json(self, status: int, data: dict):
         body = json.dumps(data).encode("utf-8")

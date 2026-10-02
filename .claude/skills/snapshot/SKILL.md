@@ -8,10 +8,13 @@ description: Generate a "Digital Presence Snapshot" lead-gen report (HTML, print
 Produces the same report format built for Terra Klean Solutions: a cold, evidence-based
 audit of a prospect's online presence, used as a free lead-magnet by EdgeBeyond Solutions
 to book a 30-minute walkthrough call. One self-contained HTML file — the report itself has
-no download/print button embedded; the `index.html` app's toolbar handles Download
-HTML/PDF (the native print dialog — the report's CSS is already tuned for clean
-pagination). Don't add a print button inside template.html/the generated report — that was
-tried and caused a visible duplicate with the app's own toolbar button.
+no download/print button embedded; the `index.html` app's toolbar handles both Download
+HTML and Download PDF. PDF is rendered server-side by `server.py` (`POST /render-pdf`,
+headless Chrome with `--no-pdf-header-footer`) — deliberately not the browser's own print
+dialog, because that dialog's default "Headers and footers" option stamps the date,
+`localhost:8787`, and page numbers onto every page, and a report went out to a real
+prospect that way once. Don't add a print button inside template.html/the generated report
+— that was tried and caused a visible duplicate with the app's own toolbar button.
 
 **Primary path:** `server.py` runs this exact playbook automatically — the user opens
 `index.html` at http://localhost:8787, types just the prospect's name (+ optionally
@@ -35,6 +38,14 @@ fallback form in `index.html` instead of the automated one.
   pillar names, footer disclaimer). Keep the prospect's own business name and any verbatim
   evidence quotes exactly as found, untranslated. Spanish should read as natural business
   Spanish for Mexico (tú/informal but professional), not a literal word-for-word translation.
+- **Datos verificados manualmente** (optional, free text) — facts the user already confirmed
+  firsthand (e.g. "saw on Google Maps: unclaimed listing, 139 reviews, 4.2★"; "Facebook has
+  2,700 followers, 11 reviews"). **Treat anything given here as ground truth that overrides
+  your own research.** This exists because Google Maps, Facebook, and Instagram actively
+  block automated fetches — see the rule under Step 1 — so a human who actually opened the
+  real page is a more reliable source than this tool's own WebFetch attempt on that same
+  page. Reconcile: if your research disagrees with a verified fact, the verified fact wins,
+  and don't describe the two as if they're both independently confirmed.
 
 ## Step 1 — Research (use WebSearch / WebFetch)
 
@@ -60,6 +71,41 @@ Keep concrete evidence for anything you plan to quote verbatim (footer text, exa
 numbers/addresses found, review counts) — the report's credibility depends on specific,
 checkable facts, not vague claims.
 
+**"Couldn't access" is not "doesn't exist" — this caused a real false claim once, fix
+it at the source.** Google Maps, Facebook, and Instagram actively block automated
+WebFetch requests (you'll typically get a captcha/consent wall or an empty shell page, not
+the real content). When that happens:
+- Do NOT write a finding that implies the profile/account is absent, unclaimed-and-empty,
+  or ungraded-for-lack-of-data as if that were a confirmed observation. A sentence like "no
+  regresó una ficha oficial con calificación, número de reseñas o fotos" reads to the
+  prospect as "you have no GBP presence," which may be flatly false and contradict what
+  they can see themselves by opening the page — exactly what happened with Balneario Las
+  Torres (it has 139 reviews, 4.2★, unclaimed).
+- First, try WebSearch instead of WebFetch for that specific thing — a search for
+  `"<business name>" reviews` or `"<business name>" google maps` very often surfaces the
+  rating and review count directly in the search snippet text even when the page itself is
+  blocked.
+- If WebSearch snippets don't surface it either, say so plainly and narrowly: "No pudimos
+  cargar directamente la ficha de Google (Google bloquea accesos automatizados) y la
+  búsqueda tampoco mostró calificación o número de reseñas en el resultado." Grade that
+  pillar as unknown/not-gradable-with-confidence rather than F, and do not invent a
+  narrative around an assumed absence.
+- If the **Datos verificados manualmente** input (see Inputs above) supplies the real
+  numbers, use those — they're from a human who actually opened the page, which beats this
+  tool's own blocked fetch every time.
+
+**Claims naming a real third party (a public official, government body, news outlet,
+named competitor, etc.) need an actually-fetched source, every time — no exceptions.**
+Before including something like "the governor recommended this business, covered by
+[Publication]," you must have fetched (via WebSearch/WebFetch, this run) a real, specific
+URL that confirms it, and you should be able to name that URL if asked. Don't include a
+claim like this because it "sounds plausible" or matches a pattern — attributing something
+false to a real public figure or a real publication in a document sent to a client is a
+legal/reputational risk, not just a factual error. (In the Las Torres case this particular
+claim turned out to be true and verifiable — lasillarota.com and milenio.com both have
+real March 2024 articles — but it was included without the agent having confirmed that at
+the time, which was the actual process failure, not the content.)
+
 ## Step 2 — Grade each pillar (A–F)
 
 Grade honestly, the way a prospect's next customer would judge them:
@@ -69,8 +115,11 @@ Grade honestly, the way a prospect's next customer would judge them:
   working site, or one that actively misleads (broken trust claims, dead links).
   **No website at all is an automatic F** — reframe the whole pillar around that absence.
 - **Google Business Profile:** A/B = claimed, actively managed, real reviews, photos. C =
-  claimed but thin (few reviews/photos). D = claimed but neglected. F = unclaimed or
-  nonexistent.
+  claimed but thin (few reviews/photos). D = claimed but neglected or genuinely unclaimed
+  (confirmed, not assumed). F = confirmed nonexistent. If direct access was blocked and
+  neither WebSearch snippets nor **Datos verificados manualmente** could confirm the real
+  state, do not default to F — grade conservatively (C) and say explicitly in the finding
+  that this pillar couldn't be fully verified, rather than implying confirmed absence.
 - **Social:** graded on whether there's an active, prospect-facing channel (not just a
   dormant LinkedIn page).
 - **Listings:** graded on NAP consistency across directories, not on how many directories
@@ -165,8 +214,10 @@ on a competitor instead").
 Tell the user to open `index.html` in their browser (or open it yourself in the Browser
 pane via `preview_start` with the local file path) and paste the content from Step 4 into
 the matching fields. Clicking **Generar reporte** renders the finished report instantly
-inside the page; **Descargar HTML** saves the self-contained file, **Descargar PDF** opens
-the browser's native print dialog (already paginated one section per page).
+inside the page; **Descargar HTML** saves the self-contained file, **Descargar PDF** sends
+it to `server.py`'s `/render-pdf` endpoint (headless Chrome, no header/footer, already
+paginated one section per page) and downloads the result — no browser print dialog
+involved, so there's no "Headers and footers" setting to remember to uncheck.
 
 Suggest they save the downloaded HTML/PDF into `reports/<Slug>-Snapshot/` — that naming
 convention (a per-prospect folder ending in `-Snapshot`) is how the user identifies
