@@ -3,6 +3,14 @@ name: snapshot
 description: Generate a "Digital Presence Snapshot" lead-gen report (HTML, printable to PDF) for a prospect business, auditing their website (or lack of one), Google Business Profile, and social/directory listings. Use when the user asks to "genera el snapshot para <prospecto>", "haz un snapshot de <negocio>", or similar, from within the -Snapshot project.
 ---
 
+> **This folder lives in `Dropbox/GitHub/Apps/-Snapshot` and the user keeps it set to
+> "online-only" between uses to save local disk space.** If any file here reads as 0 bytes
+> (to `cat`, `Read`, `git`, etc.), that almost always means Dropbox hasn't finished
+> downloading it locally yet — it is NOT data loss or corruption, the real content is safe
+> in Dropbox's cloud. Before editing or running anything here, ask the user to confirm the
+> folder is actually downloaded/available offline (not just that they toggled it), and
+> re-check file sizes rather than concluding the project is broken.
+
 # Digital Presence Snapshot generator
 
 Produces the same report format built for Terra Klean Solutions: a cold, evidence-based
