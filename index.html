@@ -693,6 +693,15 @@ document.getElementById("auto-generate-btn").addEventListener("click", async () 
   const verified = document.getElementById("autoVerified").value.trim();
   const lang = document.getElementById("autoLang").value;
 
+  if (!verified) {
+    const proceed = confirm(
+      "No pusiste nada en \"Datos verificados manualmente\".\n\n" +
+      "Si ya revisaste tú mismo su Google Maps o Facebook, cancela y pégalos — Google/Facebook/Instagram bloquean la investigación automática, así que sin eso el generador puede adivinar mal (y ya pasó antes con este mismo prospecto).\n\n" +
+      "¿Generar de todos modos, solo con lo que encuentre por su cuenta?"
+    );
+    if (!proceed) return;
+  }
+
   btn.disabled = true;
   btn.textContent = "Investigando… (puede tardar hasta 8 min)";
   status.style.display = "block";

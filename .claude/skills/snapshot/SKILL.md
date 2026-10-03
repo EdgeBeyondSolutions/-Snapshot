@@ -101,6 +101,14 @@ the real content). When that happens:
 - If the **Datos verificados manualmente** input (see Inputs above) supplies the real
   numbers, use those — they're from a human who actually opened the page, which beats this
   tool's own blocked fetch every time.
+- **Stay consistent across the WHOLE report, not just that one finding.** This exact
+  failure happened: Pilar 02 correctly said "no pudimos verificar el estado de su ficha,"
+  but another sentence elsewhere (overall summary) still asserted a definite negative —
+  "el interés no se está convirtiendo en reseñas" — about that same unverified channel.
+  Once you've written "couldn't verify X," grep your own draft mentally for any other
+  place you're implying something definite about X, and soften or remove it. An unverified
+  pillar should read as genuinely unverified everywhere it's mentioned, not confidently
+  negative in the hero/summary and merely uncertain in its own section.
 
 **Claims naming a real third party (a public official, government body, news outlet,
 named competitor, etc.) need an actually-fetched source, every time — no exceptions.**
